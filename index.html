@@ -1,19 +1,6 @@
-<!doctype html><html lang="fr"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>TADA, la data à l'endroit</title>
-<meta name="description" content="Les chiffres publics sur les grands sujets de la présidentielle 2027 : une définition, l'évolution depuis 2000, la comparaison européenne et la source officielle de chaque courbe.">
-<link rel="canonical" href="https://mathilde-tada.github.io/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316191d'/%3E%3Ctext x='16' y='23' font-family='Arial,sans-serif' font-weight='700' font-size='20' text-anchor='middle' fill='%23ffffff'%3ET%3C/text%3E%3C/svg%3E">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:site_name" content="TADA">
-<meta property="og:title" content="TADA, la data à l'endroit">
-<meta property="og:description" content="Les chiffres publics sur les grands sujets de la présidentielle 2027 : une définition, l'évolution depuis 2000, la comparaison européenne et la source officielle de chaque courbe.">
-<meta property="og:url" content="https://mathilde-tada.github.io/">
-<meta property="og:image" content="https://mathilde-tada.github.io/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="TADA, la data à l'endroit : les chiffres publics de la présidentielle 2027, avec leurs sources.">
-<meta name="twitter:card" content="summary_large_image">
-</head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>TADA</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -55,6 +42,8 @@ nav.toc{padding-block:14px;border-bottom:1px solid var(--rule);display:grid;gap:
 nav.toc ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 16px;font-family:var(--f-display);font-size:15px}
 nav.toc a{text-decoration:none;color:var(--muted)}
 nav.toc a:hover{color:var(--ink);text-decoration:underline}
+nav.toc a[aria-current="page"]{color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.backall{margin:0 0 8px}
 
 section.block{padding-block:40px 8px}
 section.block > h2{font-size:clamp(26px,5vw,34px);font-weight:700;margin-bottom:8px}
@@ -82,6 +71,56 @@ section.block > h2{font-size:clamp(26px,5vw,34px);font-weight:700;margin-bottom:
 .legend i.alt{border-top-color:var(--line-alt)}
 .legend i.proj{border-top-style:dashed}
 .legend i.ref{border-top:2px dashed var(--mark)}
+.chart{position:relative}
+article.theme{--tc:var(--muted)}
+#climat,ul.tabs a[data-tab="climat"]{--tc:#5d8065}
+#demographie,ul.tabs a[data-tab="demographie"]{--tc:#8b6f9c}
+#dette,ul.tabs a[data-tab="dette"]{--tc:#8a6a3d}
+#education,ul.tabs a[data-tab="education"]{--tc:#4d7092}
+#emploi,ul.tabs a[data-tab="emploi"]{--tc:#b0643c}
+#immigration,ul.tabs a[data-tab="immigration"]{--tc:#3f8584}
+#logement,ul.tabs a[data-tab="logement"]{--tc:#9a5b6f}
+#pauvrete,ul.tabs a[data-tab="pauvrete"]{--tc:#7a7444}
+#prix,ul.tabs a[data-tab="prix"]{--tc:#a8842a}
+#retraites,ul.tabs a[data-tab="retraites"]{--tc:#5f6aa0}
+#sante,ul.tabs a[data-tab="sante"]{--tc:#a8505a}
+#securite,ul.tabs a[data-tab="securite"]{--tc:#55606b}
+article.theme > h3{border-left:6px solid var(--tc);padding-left:10px}
+article.theme .def{border-top:3px solid var(--tc)}
+ul.tabs a[data-tab]:not([data-tab="tous"])::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--tc);margin-right:6px;vertical-align:1px}
+nav.toc a[aria-current="page"]{text-decoration-color:var(--tc,var(--ink))}
+nav.toc{position:sticky;top:0;z-index:20;background:var(--sheet)}
+nav.toc ul.tabs{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;padding-bottom:6px;scrollbar-width:thin}
+.qwrap{position:relative}
+#q{width:100%;max-width:440px;box-sizing:border-box;font:15px var(--f-display);color:var(--ink);background:var(--sheet);border:1px solid var(--rule);padding:7px 10px}
+#q:focus{outline:2px solid var(--mark);outline-offset:1px}
+nav.toc ul.qres{position:absolute;top:100%;left:0;width:min(540px,100%);display:block;margin:4px 0 0;padding:4px;background:var(--sheet);border:1px solid var(--rule);box-shadow:0 4px 14px rgba(0,0,0,.14);z-index:30;font-size:14px}
+.qres button{display:grid;gap:1px;width:100%;text-align:left;background:none;border:0;padding:6px 8px;cursor:pointer;color:var(--ink);font:500 14px var(--f-display)}
+.qres button span{font:12px var(--f-data);color:var(--muted)}
+.qres button:hover,.qres button.active{background:var(--def-bg)}
+.qres li.none{padding:6px 8px;font:13px var(--f-data);color:var(--muted)}
+.chart .howto{font-size:13.5px;line-height:1.45}
+.chart details.calc{font-size:13.5px;line-height:1.5;background:var(--def-bg);padding:6px 10px}
+.chart details.calc summary{cursor:pointer;font:500 13px var(--f-display)}
+.chart details.calc p{margin:6px 0 2px}
+@media (max-width:700px){nav.toc{padding-block:8px;gap:6px} nav.toc .label{display:none} nav.toc ul{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;padding-bottom:4px}}
+.chart svg line.cmark{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3}
+.chart svg text.blab{fill:var(--mark);font-size:10px}
+.chart svg rect.hit{fill:transparent;cursor:crosshair}
+.chart svg line.guide{stroke:var(--muted);stroke-width:1;stroke-dasharray:2 3}
+.chart svg circle.dot{fill:var(--line);stroke:var(--sheet);stroke-width:2}
+.chart svg circle.dot.alt{fill:var(--line-alt)}
+.chart .tip{position:absolute;z-index:5;display:grid;gap:2px;background:var(--sheet);color:var(--ink);border:1px solid var(--rule);box-shadow:0 2px 8px rgba(0,0,0,.12);padding:6px 9px;font:12px var(--f-data);white-space:nowrap;pointer-events:none}
+.chart .tip b{font-weight:500}
+.zoombox{width:min(1100px,96vw);max-width:96vw;max-height:94vh;overflow:auto;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);padding:16px 20px 20px}
+.zoombox::backdrop{background:rgba(0,0,0,.45)}
+.zoombox .zhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px;font:500 13px var(--f-display);color:var(--muted)}
+.zoombox .zctl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font:13px var(--f-data);margin-bottom:12px}
+.zoombox .zctl select{font:inherit;color:var(--ink);background:var(--sheet);border:1px solid var(--rule);padding:3px 6px}
+table.data.compact{min-width:0;font-size:14px}
+table.data.compact th,table.data.compact td{padding-right:10px}
+table.data.compact td:first-child{white-space:normal}
+.data caption{caption-side:top;text-align:left;font:12px var(--f-data);color:var(--muted);padding-bottom:6px}
 details.limits{border-top:1px dashed var(--rule);padding-top:12px}
 details.limits summary{cursor:pointer;font-family:var(--f-display);font-weight:500;font-size:15px}
 details.limits ul{margin:10px 0 0;padding-left:20px;font-size:15px;display:grid;gap:6px;max-width:76ch}
@@ -130,23 +169,25 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
 </header>
 
 <nav class="toc" aria-label="Sommaire">
+  <div class="qwrap"><input type="search" id="q" autocomplete="off" placeholder="Rechercher : retraites, chômage, dette, inflation…" aria-label="Rechercher un thème ou un indicateur" aria-controls="qres"><ul id="qres" class="qres" hidden></ul></div>
   <span class="label">Douze thèmes, par ordre alphabétique</span>
-  <ul>
-    <li><a href="#climat">Climat</a></li><li><a href="#demographie">Démographie</a></li><li><a href="#dette">Dette et déficit publics</a></li><li><a href="#education">Éducation</a></li><li><a href="#emploi">Emploi et chômage</a></li><li><a href="#immigration">Immigration</a></li><li><a href="#logement">Logement</a></li><li><a href="#pauvrete">Pauvreté et inégalités</a></li><li><a href="#prix">Prix et pouvoir d'achat</a></li><li><a href="#retraites">Retraites</a></li><li><a href="#sante">Santé</a></li><li><a href="#securite">Sécurité</a></li>
+  <ul class="tabs">
+    <li><a href="#themes" data-tab="tous">Tous les thèmes</a></li>    <li><a href="#climat" data-tab="climat">Climat</a></li><li><a href="#demographie" data-tab="demographie">Démographie</a></li><li><a href="#dette" data-tab="dette">Dette et déficit publics</a></li><li><a href="#education" data-tab="education">Éducation</a></li><li><a href="#emploi" data-tab="emploi">Emploi et chômage</a></li><li><a href="#immigration" data-tab="immigration">Immigration</a></li><li><a href="#logement" data-tab="logement">Logement</a></li><li><a href="#pauvrete" data-tab="pauvrete">Pauvreté et inégalités</a></li><li><a href="#prix" data-tab="prix">Prix et pouvoir d'achat</a></li><li><a href="#retraites" data-tab="retraites">Retraites</a></li><li><a href="#sante" data-tab="sante">Santé</a></li><li><a href="#securite" data-tab="securite">Sécurité</a></li>
   </ul>
   <ul><li><a href="#divergences">Quand les chiffres divergent</a></li><li><a href="#candidats">Candidats</a></li><li><a href="#methode">Notre méthode</a></li><li><a href="#apropos">Qui fait TADA</a></li></ul>
 </nav>
 
 <section class="block" id="themes">
   <h2>Les thèmes</h2>
-  <p class="intro">Données arrêtées au 8 novembre 2026. Les thèmes sont classés par ordre alphabétique pour n'en mettre aucun en avant. Sur les courbes, la France est en trait foncé et la moyenne de l'Union européenne en gris. Les bandes grises signalent trois crises, les mêmes sur toutes les courbes : la crise financière (2008-2009), le Covid-19 (2020) et la guerre en Ukraine (2022). Un trait pointillé relie deux années entre lesquelles la source ne publie pas de valeur ; une marque orange signale une rupture de série.</p>
+  <p class="intro">Dernière mise à jour : 10 novembre 2026. Le site n'est pas mis à jour automatiquement : chaque chiffre est actualisé à la main quand sa source publie une nouvelle valeur (une fois par mois, par trimestre ou par an selon les cas), et chaque changement est daté dans le <a href="#journal">journal des modifications</a>. Les thèmes sont classés par ordre alphabétique pour n'en mettre aucun en avant. Sur les courbes, la France est en trait foncé et la moyenne de l'Union européenne en gris. Un trait vertical pointillé marque le début de quatre crises, les mêmes sur toutes les courbes : la crise financière (faillite de la banque Lehman Brothers, septembre 2008), le Covid-19 (premier confinement, mars 2020), la guerre en Ukraine (invasion russe, février 2022) et la guerre en Iran (frappes américaines et israéliennes sur l'Iran à partir du 28 février 2026, puis ripostes iraniennes dans le Golfe). Survolez ou touchez une courbe pour lire les valeurs de chaque année ; le bouton « Agrandir » ouvre le graphique en grand et permet de choisir la période. Un trait pointillé relie deux années entre lesquelles la source ne publie pas de valeur ; une marque orange signale une rupture de série (la source a changé sa façon de compter, par exemple en incluant Mayotte à partir de 2014 : les valeurs avant et après ne sont pas tout à fait comparables, même si la courbe semble continue).</p>
 
   <article class="theme" id="climat">
     <h3>Climat</h3>
     <div class="def">
-      <p><strong>Définition.</strong> Les gaz à effet de serre (dioxyde de carbone, méthane, protoxyde d'azote, gaz fluorés) retiennent la chaleur dans l'atmosphère. On les additionne en « équivalent CO<sub>2</sub> » selon leur pouvoir de réchauffement. Les chiffres ci-dessous comptent les émissions produites sur le territoire, hors absorption par les forêts et les sols.</p>
-      <p><strong>En France.</strong> L'inventaire officiel est réalisé par le Citepa pour le ministère de la Transition écologique et transmis à l'ONU et à l'Union européenne. La trajectoire de baisse est fixée par la Stratégie nationale bas-carbone (SNBC).</p>
-      <p class="src">Sources : <a href="https://www.statistiques.developpement-durable.gouv.fr/edition-numerique/chiffres-cles-du-climat/fr/10-panorama-francais-des-gaz-a" target="_blank" rel="noopener">SDES, Chiffres clés du climat</a> · <a href="https://www.citepa.org/wp-content/uploads/2026/06/Synthese-et-messages-cles-Secten-2026.pdf" target="_blank" rel="noopener">Citepa, Secten 2026</a> · <a href="https://ec.europa.eu/eurostat/databrowser/view/env_air_gge/default/table" target="_blank" rel="noopener">Eurostat, émissions de gaz à effet de serre</a></p>
+      <p><strong>Définition.</strong> Les gaz à effet de serre retiennent la chaleur autour de la Terre, comme une couverture : plus il y en a, plus la planète se réchauffe. Le principal est le dioxyde de carbone (CO<sub>2</sub>), rejeté quand on brûle du pétrole, du gaz ou du charbon ; viennent ensuite le méthane (élevage, décharges) et le protoxyde d'azote (engrais). Comme ces gaz ne réchauffent pas tous autant, on les convertit en une seule unité, l'<em>équivalent CO<sub>2</sub></em> : une tonne de méthane compte pour environ 28 tonnes de CO<sub>2</sub>, parce qu'elle réchauffe environ 28 fois plus sur cent ans.</p>
+      <p><strong>Ce que comptent les courbes.</strong> Tout ce qui est émis sur le sol français : voitures et camions, chauffage des logements, usines, agriculture, centrales électriques. On ne retire pas le CO<sub>2</sub> que les forêts et les sols absorbent (« hors forêts et sols »), et on ne compte pas les émissions liées aux produits fabriqués à l'étranger puis importés.</p>
+      <p><strong>En France.</strong> L'inventaire officiel est réalisé par le Citepa pour le ministère de la Transition écologique et transmis à l'ONU et à l'Union européenne. La trajectoire de baisse est fixée par la Stratégie nationale bas-carbone (SNBC), la feuille de route par laquelle la France applique l'accord de Paris de 2015 (limiter le réchauffement bien en dessous de 2 °C et poursuivre l'effort pour 1,5 °C). L'accord ne fixe pas de trajectoire pays par pays : la SNBC le fait pour la France sous forme de <em>budgets carbone</em>, des plafonds d'émissions annuelles moyennes par période de cinq ans, sur le même périmètre que la courbe (hors forêts et sols). La troisième version, adoptée par décret le 16 juillet 2026, fixe 342 millions de tonnes par an pour 2024-2028, 262 pour 2029-2033 et 194 pour 2034-2038. Ils figurent en pointillé orange sur le premier graphique.</p>
+      <p class="src">Sources : <a href="https://www.statistiques.developpement-durable.gouv.fr/edition-numerique/chiffres-cles-du-climat/fr/10-panorama-francais-des-gaz-a" target="_blank" rel="noopener">SDES, Chiffres clés du climat</a> · <a href="https://www.citepa.org/wp-content/uploads/2026/06/Synthese-et-messages-cles-Secten-2026.pdf" target="_blank" rel="noopener">Citepa, Secten 2026</a> · <a href="https://ec.europa.eu/eurostat/databrowser/view/env_air_gge/default/table" target="_blank" rel="noopener">Eurostat, émissions de gaz à effet de serre</a> · <a href="https://www.vie-publique.fr/eclairage/19383-snbc-ppe-pnacc-la-politique-climatique-de-la-france" target="_blank" rel="noopener">Vie-publique, budgets carbone</a> · <a href="https://www.ecologie.gouv.fr/actualites/adoption-feuille-route-climatique-francaise" target="_blank" rel="noopener">Ministère de la Transition écologique, SNBC 3</a></p>
     </div>
     <div class="charts">
       <div class="chart" data-c="ges"></div>
@@ -156,6 +197,7 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
     <details class="limits"><summary>Ce que ces chiffres ne disent pas</summary><ul>
       <li>Les émissions liées aux produits importés ne sont pas comptées ici. L'empreinte carbone, qui les inclut, est nettement plus élevée que les émissions territoriales.</li>
       <li>Chaque édition de l'inventaire révise les années passées. Les valeurs 1990-2024 viennent de l'inventaire 2026 transmis à l'Union européenne ; 2025 est une première estimation du Citepa.</li>
+      <li>Un budget carbone est un plafond moyen sur cinq ans, pas un plafond pour chaque année. Selon le ministère, le budget 2015-2018 a été dépassé et le budget 2019-2023 a été respecté (406 millions de tonnes par an en moyenne pour un plafond ajusté à 425). Les plafonds sont ajustés techniquement quand l'inventaire est révisé : la courbe montre les valeurs fixées par décret.</li>
       <li>La comparaison avec l'Union européenne se fait en indice, parce que les deux n'ont pas la même taille. Un indice de 67 signifie des émissions inférieures d'un tiers à celles de 1990.</li>
     </ul></details>
   </article>
@@ -190,9 +232,11 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
       <div class="chart" data-c="dette"></div>
       <div class="chart" data-c="deficit"></div>
       <div class="chart" data-c="depenses"></div>
+      <div class="chart" data-c="interets"></div>
     </div>
     <details class="limits"><summary>Ce que ces chiffres ne disent pas</summary><ul>
       <li>La dette est une valeur brute : elle ne retranche pas les actifs détenus par les administrations. La dette nette était de 108,5 % du PIB en 2025.</li>
+      <li>Seuls les intérêts sont une dépense publique. Le remboursement du capital emprunté n'en est pas une : un emprunt qui arrive à échéance est en général remboursé par un nouvel emprunt, ce qui ne change pas le montant de la dette.</li>
       <li>Le coût de la dette dépend des taux d'intérêt, pas seulement de son montant. Les charges d'intérêts des administrations ont atteint 64,7 milliards d'euros en 2025, en hausse de 11,2 % sur un an.</li>
       <li>À la fin du 2<sup>e</sup> trimestre 2026, la dette atteignait 119,0 % du PIB (<a href="https://www.insee.fr/fr/statistiques/9053525" target="_blank" rel="noopener">Insee</a>).</li>
     </ul></details>
@@ -231,6 +275,7 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
       <li>La part des jeunes ni en emploi, ni en études, ni en formation compte tous les jeunes concernés, qu'ils cherchent un emploi ou non. Elle se calcule sur l'ensemble des 15-29 ans, pas seulement sur ceux qui travaillent ou cherchent un emploi.</li>
       <li>Ces chiffres ne comptent pas les personnes qui voudraient travailler mais ne remplissent pas tous les critères (le « halo » du chômage), ni celles qui travaillent moins qu'elles le souhaitent.</li>
       <li>Ce n'est pas le nombre d'inscrits à France Travail. Voir « Quand les chiffres divergent ».</li>
+      <li>Le travail non rémunéré (tâches domestiques, soins aux enfants ou à des proches âgés ou malades) n'est compté ni dans l'emploi ni dans le chômage. L'Insee le mesure environ tous les dix ans avec l'<a href="https://www.insee.fr/fr/statistiques/2118074" target="_blank" rel="noopener">enquête Emploi du temps</a>, qui permet de comparer le temps qu'y consacrent les femmes et les hommes. La dernière publiée date de 2010 ; la suivante est en cours de collecte en 2025-2026 et sera ajoutée quand ses résultats paraîtront.</li>
     </ul></details>
   </article>
 
@@ -313,13 +358,13 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
   <article class="theme" id="retraites">
     <h3>Retraites</h3>
     <div class="def">
-      <p><strong>Définition.</strong> Le système de retraite français fonctionne principalement par <em>répartition</em> : les cotisations versées par les actifs d'une année financent les pensions des retraités de la même année. Son équilibre dépend donc du rapport entre le nombre de personnes en âge de travailler et le nombre de retraités. Le second graphique indique combien de personnes de 15 à 64 ans il y a pour une personne de 65 ans ou plus : 2,8 en France en 2025. Comme les pensions sont payées par les cotisations des actifs, ce rapport donne un ordre de grandeur de l'équilibre démographique du système.</p>
+      <p><strong>Définition.</strong> Le système de retraite français fonctionne principalement par <em>répartition</em> : les cotisations versées par les actifs d'une année financent les pensions des retraités de la même année. Son équilibre dépend donc du rapport entre le nombre de personnes en âge de travailler et le nombre de retraités. Le rapport qui compte pour le financement est celui des <em>cotisants</em> (les personnes en emploi) aux <em>retraités</em> : 1,77 cotisant pour un retraité en 2023, contre 1,78 en 2012 (Insee, d'après la Drees). Le second graphique donne la tendance démographique de fond, comparable entre pays : le nombre de personnes de 65 ans ou plus pour 100 personnes de 15 à 64 ans, 35,5 en France en 2025. C'est un rapport d'âges et non de situations : toutes les personnes de 15 à 64 ans ne travaillent pas, et toutes celles de 65 ans ou plus ne sont pas retraitées.</p>
       <p><strong>En France.</strong> Il existe plusieurs dizaines de régimes (régime général, fonction publique, complémentaires Agirc-Arrco…). Le Conseil d'orientation des retraites (COR) suit et projette leur situation ; la Drees publie les statistiques sur les retraités.</p>
-      <p class="src">Sources : <a href="https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse-documents-de-reference/250731_PANORAMAS-retraites" target="_blank" rel="noopener">Drees, Les retraités et les retraites 2025</a> · <a href="https://www.cor-retraites.fr/sites/default/files/2026-06/Synth%C3%A8se_RA_2026_0.pdf" target="_blank" rel="noopener">COR, rapport annuel 2026</a> · <a href="https://ec.europa.eu/eurostat/databrowser/view/spr_exp_pens/default/table" target="_blank" rel="noopener">Eurostat, dépenses de pensions</a> · <a href="https://ec.europa.eu/eurostat/databrowser/view/demo_pjanind/default/table" target="_blank" rel="noopener">Eurostat, structure de la population</a></p>
+      <p class="src">Sources : <a href="https://drees.solidarites-sante.gouv.fr/publications-communique-de-presse-documents-de-reference/250731_PANORAMAS-retraites" target="_blank" rel="noopener">Drees, Les retraités et les retraites 2025</a> · <a href="https://www.cor-retraites.fr/sites/default/files/2026-06/Synth%C3%A8se_RA_2026_0.pdf" target="_blank" rel="noopener">COR, rapport annuel 2026</a> · <a href="https://ec.europa.eu/eurostat/databrowser/view/spr_exp_pens/default/table" target="_blank" rel="noopener">Eurostat, dépenses de pensions</a> · <a href="https://ec.europa.eu/eurostat/databrowser/view/demo_pjanind/default/table" target="_blank" rel="noopener">Eurostat, structure de la population</a> · <a href="https://www.insee.fr/fr/statistiques/2415121" target="_blank" rel="noopener">Insee, cotisants et retraités</a></p>
     </div>
     <div class="charts">
       <div class="chart" data-c="pensions"></div>
-      <div class="chart" data-c="ratio"></div>
+      <div class="chart" data-c="dependance"></div>
     </div>
     <details class="limits"><summary>Ce que ces chiffres ne disent pas</summary><ul>
       <li>Le poids des retraites dépend de ce que l'on compte : 15,0 % du PIB en 2024 pour Eurostat, qui inclut les pensions d'invalidité et les préretraites ; 14,1 % en 2025 pour le COR, qui suit les dépenses du système de retraite ; 13,1 % en 2023 pour la Drees, qui ne compte que les pensions. Ces mesures ne se mélangent pas.</li>
@@ -374,6 +419,7 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
       <li>Il n'y a pas de comparaison européenne : la définition des infractions et les règles d'enregistrement des plaintes diffèrent trop d'un pays à l'autre.</li>
     </ul></details>
   </article>
+  <p class="label backall" id="backall" hidden><a href="#themes">Voir les douze thèmes</a></p>
 </section>
 
 <section class="block" id="divergences">
@@ -411,12 +457,32 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
     </ul>
   </div>
   <p class="why"><strong>Pourquoi l'écart :</strong> les trois organismes ne retiennent pas le même périmètre de dépenses. Les chiffres les plus récents sont de 14,1 % du PIB en 2025 pour le COR et de 15,0 % en 2024 pour Eurostat. Sources : <a href="https://www.cor-retraites.fr/sites/default/files/2026-06/Synth%C3%A8se_RA_2026_0.pdf" target="_blank" rel="noopener">COR</a>, <a href="https://drees.solidarites-sante.gouv.fr/sites/default/files/2025-07/Fiche%2010%20-%20Les%20masses%20financi%C3%A8res%20relatives%20aux%20pensions%20de%20retraite.pdf" target="_blank" rel="noopener">Drees</a>, <a href="https://ec.europa.eu/eurostat/databrowser/view/spr_exp_pens/default/table" target="_blank" rel="noopener">Eurostat</a>.</p>
+  <h3 class="div-h" id="div-pouvoir">Le pouvoir d'achat a-t-il augmenté ?</h3>
+  <div class="charts">
+    <div class="chart"><div class="tablewrap"><table class="data compact">
+      <caption>Évolution du pouvoir d'achat d'une année sur l'autre, en %</caption>
+      <thead><tr><th></th><th class="n">2020</th><th class="n">2021</th><th class="n">2022</th><th class="n">2023</th><th class="n">2024</th><th class="n">2025</th></tr></thead>
+      <tbody>
+        <tr><td>Ensemble des ménages</td><td class="n">0,2</td><td class="n">3,4</td><td class="n">0,4</td><td class="n">1,0</td><td class="n">2,7</td><td class="n">−0,4</td></tr>
+        <tr><td>Par unité de consommation</td><td class="n">−0,3</td><td class="n">2,8</td><td class="n">−0,3</td><td class="n">0,4</td><td class="n">2,2</td><td class="n">−0,7</td></tr>
+        <tr><td>Revenu ajusté par habitant</td><td class="n">−1,8</td><td class="n">4,2</td><td class="n">0,7</td><td class="n">0,7</td><td class="n">1,9</td><td class="n">−0,5</td></tr>
+      </tbody>
+    </table></div><p class="src">Deux premières lignes : Insee, comptes nationaux annuels, mai 2026. Dernière ligne : Eurostat, tableau nasa_10_ki, 28 octobre 2026. 2024 et 2025 provisoires.</p></div>
+    <ul class="counts">
+      <li><strong>Ensemble des ménages.</strong> Le revenu disponible de tous les ménages, corrigé de la hausse des prix. Il augmente aussi quand la population augmente.</li>
+      <li><strong>Par unité de consommation.</strong> Le même revenu rapporté au nombre de ménages et à leur taille. L'Insee le retient pour approcher une mesure plus individuelle du pouvoir d'achat.</li>
+      <li><strong>Revenu ajusté par habitant.</strong> La courbe du thème « Prix et pouvoir d'achat » (Eurostat) : elle ajoute la valeur des services publics dont bénéficient directement les ménages, comme la santé ou l'éducation, et divise par le nombre d'habitants. Elle sert aux comparaisons européennes. La courbe montre son niveau (100 = 2010) ; le tableau montre sa variation chaque année.</li>
+      <li><strong>Pouvoir d'achat « arbitrable ».</strong> L'Insee le calcule aussi après les dépenses pré-engagées (loyer, énergie, assurances, abonnements), sur lesquelles les ménages ont peu de marge à court terme.</li>
+    </ul>
+  </div>
+  <p class="why"><strong>Pourquoi l'écart avec le vécu :</strong> chaque mesure est une moyenne, et l'inflation n'est pas la même pour tous les ménages. L'Insee avance d'autres raisons : les hausses de prix se remarquent davantage que les baisses, surtout sur les achats fréquents, et l'indice des prix compte l'amélioration de la qualité des produits comme une baisse de prix. Des économistes de l'OFCE contestent une partie de cette lecture et estiment que la mesure officielle surestime la hausse du pouvoir d'achat, notamment à cause de ce traitement de la qualité. Sources : <a href="https://www.insee.fr/fr/statistiques/2830244" target="_blank" rel="noopener">Insee, revenu disponible et pouvoir d'achat</a>, <a href="https://www.insee.fr/fr/statistiques/5432491" target="_blank" rel="noopener">Insee, pouvoir d'achat arbitrable</a>, <a href="https://blog.insee.fr/peut-on-mesurer-le-ressenti-eco-et-socio/" target="_blank" rel="noopener">blog de l'Insee</a>, <a href="https://fgeerolf.com/reponse-au-blog-ressenti.html" target="_blank" rel="noopener">F. Geerolf, OFCE</a>.</p>
 </section>
 
 <section class="block" id="candidats">
   <h2>Candidats et familles politiques</h2>
   <p class="intro">Cette partie est en préparation. Elle ne sera publiée qu'avec une source vérifiable pour chaque ligne.</p>
   <div class="soon">
+    <p><strong>Calendrier.</strong> Le premier tour aura lieu le dimanche 18 avril 2027 et le second le dimanche 2 mai. Pour être candidat, il faut 500 parrainages d'élus. Ils pourront être envoyés au Conseil constitutionnel dès la publication du décret de convocation des électeurs, au plus tard le 7 février 2027, et jusqu'au vendredi 12 mars 2027 au plus tard, sixième vendredi avant le premier tour. Le Conseil constitutionnel publie ensuite la liste officielle des candidats. Sources : <a href="https://www.vie-publique.fr/node/23872" target="_blank" rel="noopener">Vie-publique</a>, <a href="https://www.maire-info.com/election-presidentielle/parrainage-candidats-election-presidentielle-amf-demande-anonymat-article-31036" target="_blank" rel="noopener">Maire-info</a>.</p>
     <p><strong>Candidats.</strong> La liste officielle est arrêtée par le Conseil constitutionnel après la période des parrainages. Pour chaque candidat, TADA publiera ses propositions sur les douze thèmes ci-dessus, citées dans ses propres mots, avec un lien vers le programme ou le discours d'origine.</p>
     <p><strong>Familles politiques.</strong> Chaque famille sera présentée à partir de ses propres textes, avec la même structure et la même longueur pour toutes.</p>
     <p><strong>Discours.</strong> La règle de sélection des discours retranscrits sera publiée avant le premier, et appliquée de la même façon à chaque candidat.</p>
@@ -431,11 +497,11 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
       <li><strong>Sources publiques.</strong> Statistique publique (Insee, Dares, Drees, DEPP, SDES, SSMSI), organismes publics de suivi (COR, Citepa), Eurostat pour les comparaisons européennes et OCDE pour PISA.</li>
       <li><strong>Des évolutions plutôt que des chiffres isolés.</strong> Chaque indicateur est montré dans la durée, depuis 2000 quand la source le permet, pour que chacun voie si la situation change ou non.</li>
       <li><strong>Un repère européen.</strong> Quand un indicateur est mesuré de la même façon dans toute l'Union européenne, la courbe française est accompagnée de la moyenne des 27 pays, calculée par Eurostat. Pour comparer, les deux courbes viennent de la même source. Il n'y a pas de comparaison quand les définitions diffèrent trop d'un pays à l'autre, comme pour la délinquance.</li>
-      <li><strong>Les mêmes repères partout.</strong> Trois crises sont signalées par une bande grise sur toutes les courbes, sans commentaire : la crise financière (2008-2009), le Covid-19 (2020) et la guerre en Ukraine (2022). La liste est fixée ici pour éviter de choisir les événements graphique par graphique.</li>
-      <li><strong>Les calculs sont signalés.</strong> Quand TADA transforme un chiffre publié (un indice base 100, un rapport inversé), la source du graphique le précise.</li>
+      <li><strong>Les mêmes repères partout.</strong> Quatre crises sont signalées sur toutes les courbes, sans commentaire, par un trait à leur date de début : la crise financière (faillite de Lehman Brothers, septembre 2008), le Covid-19 (premier confinement, mars 2020), la guerre en Ukraine (invasion russe, février 2022) et la guerre en Iran (premières frappes américaines et israéliennes, 28 février 2026). Seul le début est marqué, parce que la fin d'une crise n'a pas de date officielle et que les deux guerres sont toujours en cours. Sur les courbes annuelles, le trait est placé sur l'année ; une crise qui commence après la dernière valeur publiée n'apparaît pas. La liste est fixée ici pour éviter de choisir les événements graphique par graphique. Seule exception : le score PISA, mesuré tous les trois ou quatre ans seulement, où les repères n'aideraient pas à lire la courbe.</li>
+      <li><strong>Pas de calcul sans explication.</strong> TADA reprend les chiffres tels que les sources les publient. Quand une comparaison oblige à calculer (rapporter un nombre à la population, exprimer une série en base 100), le graphique l'indique et détaille le calcul pas à pas, avec un exemple chiffré, sous « Comment ce chiffre est calculé ». Il reste deux calculs sur le site : les titres de séjour pour 1 000 habitants et l'indice des émissions de l'Union européenne.</li>
       <li><strong>Une définition avant les chiffres.</strong> Chaque thème commence par ce que le mot veut dire et par qui le mesure.</li>
       <li><strong>Aucune valeur inventée.</strong> Quand une source ne publie pas une année, la courbe la saute (trait pointillé). Les ruptures de série sont signalées.</li>
-      <li><strong>Pas de couleurs partisanes ni de mise en avant.</strong> Graphiques à l'encre seule, thèmes par ordre alphabétique.</li>
+      <li><strong>Pas de couleurs partisanes ni de mise en avant.</strong> Chaque thème a une couleur discrète pour se repérer dans la page, choisie pour ne pas rappeler un parti ; les graphiques restent à l'encre seule. Thèmes par ordre alphabétique.</li>
       <li><strong>Pas de sondages, pas de classement.</strong> TADA ne publie ni intentions de vote ni note sur les candidats.</li>
       <li><strong>Corrections datées.</strong> Toute erreur corrigée est consignée avec la date et la valeur précédente.</li>
     </ol>
@@ -456,10 +522,12 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
   <h2>Qui fait TADA</h2>
   <div class="method">
     <p>Je m'appelle Mathilde Beaulat. Je suis étudiante en dernière année de relations internationales au King's College de Londres (<a href="https://www.linkedin.com/in/mathilde-beaulat-5a6290227/" target="_blank" rel="noopener">profil LinkedIn</a>).</p>
-    <p>Comme la plupart des gens de mon âge, je suis la politique surtout à travers les réseaux sociaux. Avant chaque grande élection, mon fil se remplit de chiffres sur les retraites, l'immigration ou la dette publique, affichés en couleurs vives pour attirer l'œil. Certains sont faux ; d'autres sont vrais mais sortis de leur contexte, sans évolution dans le temps, sans comparaison et sans source. Quand j'ai voulu les vérifier, j'ai trouvé les données officielles de la France éparpillées entre l'Insee, la Dares, la Drees et le Citepa, chacun avec ses propres définitions, et aucun endroit où un citoyen pouvait comparer une source à une autre. Si vérifier un chiffre demandait autant d'efforts à quelqu'un qui étudie la politique, la plupart des électeurs ne le feraient jamais.</p>
+    <p>Les 18 avril et 2 mai 2027, les Françaises et les Français éliront leur président ou leur présidente. C'est une élection qui compte pour la France comme pour l'Europe, après deux mandats d'Emmanuel Macron traversés par des crises sans précédent dans ce siècle : une pandémie, une guerre aux portes de l'Union européenne, le retour de l'inflation.</p>
+    <p>Comme la plupart des gens de mon âge, je suis la politique surtout à travers les réseaux sociaux. Avant chaque grande élection, mon fil d'actualité se remplit de chiffres sur les retraites, l'immigration ou la dette publique, affichés en couleurs vives pour attirer l'œil. Certains sont faux ; d'autres sont vrais mais sortis de leur contexte, sans évolution dans le temps, sans comparaison et sans source. Quand j'ai voulu les vérifier, j'ai trouvé les données officielles de la France éparpillées entre l'Insee, la Dares, la Drees et le Citepa, chacun avec ses propres définitions, et aucun endroit où un citoyen pouvait comparer une source à une autre. Cela demandait tant de temps que la plupart des électeurs ne le feraient jamais.</p>
     <p>J'ai créé TADA pour réunir ces chiffres au même endroit, chacun avec sa définition, son évolution dans le temps et sa source. Quand deux sources officielles ne donnent pas le même chiffre, le site explique pourquoi.</p>
+    <p>TADA ne dit pas pour qui voter. En tant qu'étudiante et citoyenne, je crois qu'une information fiable repose sur des chiffres et des faits vérifiables, qui sont souvent loin de ce qui se dit en campagne. Le site donne ces chiffres et leurs sources pour que chacun se forge une opinion selon ses convictions, mais en connaissance de cause. La France a la chance d'être une démocratie où plusieurs partis existent : saisissez-la, comparez les idées, allez voir les sources par vous-même.</p>
     <p>TADA n'est financé par personne et n'a aucun lien avec un parti, un candidat ou une organisation politique.</p>
-    <p><strong>Comment le site est fait.</strong> TADA a été construit avec l'aide de Claude, un assistant d'intelligence artificielle, pour le code, la mise en page des graphiques et la recherche des publications. Les choix éditoriaux sont les miens : les thèmes, les indicateurs, les règles de neutralité. Chaque chiffre est vérifié à sa source avant d'être publié.</p>
+    <p><strong>Comment le site est fait.</strong> Les choix éditoriaux sont les miens : les thèmes, les indicateurs, les règles de neutralité. Je recherche moi-même les publications et les sources officielles. Claude, un assistant d'intelligence artificielle, m'aide pour le code, la mise en page des graphiques et l'extraction des données des fichiers publiés. Chaque chiffre est vérifié à sa source avant d'être publié.</p>
     <p><strong>Mesure d'audience.</strong> Le site compte ses visites avec GoatCounter, un outil sans cookies qui n'enregistre aucune donnée personnelle.</p>
 
     <h3>Signaler une erreur</h3>
@@ -470,10 +538,21 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
       <span class="copied" id="copy-addr-msg" role="status" aria-live="polite"></span>
     </div>
 
-    <h3>Journal des modifications</h3>
+    <h3 id="journal">Journal des modifications</h3>
     <div class="tablewrap"><table class="data">
       <thead><tr><th>Date</th><th>Thème</th><th>Modification</th></tr></thead>
       <tbody>
+        <tr><td>10 nov. 2026</td><td>Tous les thèmes</td><td>Barre de recherche et onglets fixés en haut de la page ; une couleur discrète par thème pour se repérer (les graphiques restent à l'encre). La date de mise à jour et les repères de crise sont précisés.</td></tr>
+        <tr><td>10 nov. 2026</td><td>Climat, Immigration</td><td>Les deux chiffres encore calculés par TADA sont détaillés sous leur graphique, avec un exemple. Pour la France, l'indice des émissions est désormais celui publié par Eurostat. Définition du climat réécrite plus simplement.</td></tr>
+        <tr><td>10 nov. 2026</td><td>Santé</td><td>Le reste à charge suit désormais la série d'Eurostat (transmise par la Drees pour la France), chaque année depuis 2010, avec la moyenne européenne.</td></tr>
+        <tr><td>10 nov. 2026</td><td>Prix et pouvoir d'achat</td><td>Explication de lecture de la courbe du pouvoir d'achat ; sa variation annuelle est ajoutée au tableau de « Quand les chiffres divergent ».</td></tr>
+        <tr><td>10 nov. 2026</td><td>Emploi, Logement, Candidats</td><td>Mention du travail non rémunéré ; précisions sur ce que mesure le taux des crédits immobiliers ; calendrier des parrainages.</td></tr>
+        <tr><td>10 nov. 2026</td><td>Tous les thèmes</td><td>Graphiques interactifs : valeurs de chaque année au survol ou au toucher, bouton « Agrandir » pour ouvrir le graphique en grand et choisir la période.</td></tr>
+        <tr><td>10 nov. 2026</td><td>Tous les thèmes</td><td>Les bandes grises (crise financière 2008-2009, Covid-19 2020, guerre en Ukraine 2022) sont remplacées par un trait à la date de début de chaque crise, sans date de fin. Ajout de la guerre en Iran (février 2026).</td></tr>
+        <tr><td>10 nov. 2026</td><td>Climat</td><td>Ajout des plafonds d'émissions fixés par la Stratégie nationale bas-carbone (budgets carbone 2015-2038).</td></tr>
+        <tr><td>10 nov. 2026</td><td>Dette et déficit publics</td><td>Ajout de la charge d'intérêts de la dette, France et Union européenne, depuis 2000 (Eurostat).</td></tr>
+        <tr><td>10 nov. 2026</td><td>Retraites</td><td>Le rapport « 15-64 ans pour une personne de 65 ans ou plus », calculé par TADA, est remplacé par le taux de dépendance tel que publié par Eurostat. La définition donne le nombre de cotisants pour un retraité (Insee, d'après la Drees).</td></tr>
+        <tr><td>10 nov. 2026</td><td>Quand les chiffres divergent</td><td>Ajout du pouvoir d'achat : plusieurs mesures officielles et l'écart avec le vécu.</td></tr>
         <tr><td>8 nov. 2026</td><td>Logement</td><td>Le graphique des évolutions annuelles est remplacé par l'indice des prix comparé à l'Union européenne et par les taux des crédits immobiliers.</td></tr>
         <tr><td>8 nov. 2026</td><td>Prix et pouvoir d'achat</td><td>Les évolutions annuelles du pouvoir d'achat sont remplacées par une courbe du revenu réel par habitant depuis 2000, comparée à l'Union européenne.</td></tr>
         <tr><td>8 nov. 2026</td><td>Immigration</td><td>Les entrées estimées par l'Insee (5 années publiées) sont remplacées par les premiers titres de séjour, chaque année depuis 2008, et leur répartition par motif.</td></tr>
@@ -489,6 +568,8 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
         <tr><td>5 nov. 2026</td><td>Quand les chiffres divergent</td><td>Ajout du nombre d'inscrits en catégorie A au 3<sup>e</sup> trimestre 2026 (3,35 millions) ; source remplacée par la publication de France Travail et de la Dares.</td></tr>
         <tr><td>5 nov. 2026</td><td>Quand les chiffres divergent</td><td>Pauvreté au seuil de 50 % : 8,8 % en 2024 (Insee), au lieu de 8,4 % en 2023, pour comparer les deux seuils la même année.</td></tr>
         <tr><td>5 nov. 2026</td><td>Éducation</td><td>Ajout du score PISA 2012 en mathématiques (495), publié par la DEPP.</td></tr>
+        <tr><td>19 oct. 2026</td><td>Tous les thèmes</td><td>Le site s'ouvre à tous les électeurs : douze thèmes de société, une définition simple pour chacun, des courbes d'évolution plutôt que de grands chiffres.</td></tr>
+        <tr><td>19 oct. 2026</td><td>Naissance du projet</td><td>Première idée de TADA, premier texte de présentation et première version du site, sur cinq thèmes pensés pour les étudiants.</td></tr>
       </tbody>
     </table></div>
   </div>
@@ -499,6 +580,12 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
   <span>Dates de l'élection : <a href="https://www.service-public.gouv.fr/particuliers/actualites/A15053?lang=fr" target="_blank" rel="noopener">Service-Public.fr, 2 juillet 2026</a>.</span>
 </footer>
 </div>
+
+<dialog id="zoombox" class="zoombox" aria-labelledby="zoomtitle">
+  <div class="zhead"><span id="zoomtitle">Graphique agrandi</span><button class="copy" type="button" id="zclose">Fermer</button></div>
+  <div class="zctl" id="zctl"><label>De <select id="zfrom"></select></label><label>à <select id="zto"></select></label><button class="copy" type="button" id="zall">Toute la période</button></div>
+  <div class="chart" id="zchart"></div>
+</dialog>
 
 <script>
 (function(){
@@ -521,12 +608,17 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
   }
   function head(el,c){
     var h = '<h4>'+c.title+'</h4><span class="unit">'+c.unit+'</span>';
-    var items = (c.series && c.series.length>1) ? c.series.map(function(s){return '<span><i class="'+(s.alt?'alt ':'')+(s.proj?'proj':'')+'"></i>'+s.name+'</span>';}) : [];
+    var items = (c.series && (c.series.length>1 || c.budgets)) ? c.series.map(function(s){return '<span><i class="'+(s.alt?'alt ':'')+(s.proj?'proj':'')+'"></i>'+s.name+'</span>';}) : [];
     if(c.target) items.push('<span><i class="ref"></i>'+c.target.label+'</span>');
+    if(c.budgets) items.push('<span><i class="ref"></i>'+c.budgetLabel+'</span>');
     if(items.length) h += '<div class="legend">'+items.join('')+'</div>';
     return h;
   }
-  function foot(c){ return (c.read?'<p class="read">'+c.read+'</p>':'')+'<p class="src">'+c.src+'</p><div class="tools"><button class="copy csv" type="button">Copier les données (CSV)</button></div>'; }
+  function foot(c,opt){
+    var h=(c.read?'<p class="read">'+c.read+'</p>':'')+(c.howto?'<p class="howto">'+c.howto+'</p>':'')+'<p class="src">'+c.src+'</p>'+(c.calc?'<details class="calc"><summary>Comment ce chiffre est calculé</summary><p>'+c.calc+'</p></details>':'');
+    if(opt&&opt.bare) return h;
+    return h+'<div class="tools"><button class="copy zoom" type="button">Agrandir</button><button class="copy csv" type="button">Copier les données (CSV)</button></div>';
+  }
 
   // Données d'un graphique en CSV (séparateur point-virgule, virgule décimale) pour un tableur français.
   function csvOf(c){
@@ -565,65 +657,117 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
     });
   }catch(e){}
 
-  // Même liste de crises sur toutes les courbes (voir « Notre méthode ») : années de début et de fin incluses.
-  var CRISES=[{a:2008,b:2009,l:'Crise financière'},{a:2020,b:2020,l:'Covid-19'},{a:2022,b:2022,l:'Guerre en Ukraine'}];
+  // Mêmes repères sur toutes les courbes (voir « Notre méthode ») : un trait à la date de début de chaque crise.
+  var CRISES=[{y:2008,m:9,l:'Crise financière'},{y:2020,m:3,l:'Covid-19'},{y:2022,m:2,l:'Guerre en Ukraine'},{y:2026,m:2,l:'Guerre en Iran'}];
   var MOIS=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
   function xLabel(x,c){ if(!c.monthly) return String(x); var y=Math.floor(x+1e-6), m=Math.round((x-y)*12); return MOIS[m]+' '+y; }
   function xCsv(x,c){ if(!c.monthly) return String(x); var y=Math.floor(x+1e-6), m=Math.round((x-y)*12)+1; return y+'-'+(m<10?'0':'')+m; }
+  function readOf(c){
+    var r=c.series.filter(function(s){return !s.proj && s.pts.length;}).map(function(s){ return (c.series.length>1?s.name+' : ':'')+readLine(s.pts,c.dec,c.suf||'',c); }).join(' · ');
+    return r ? r.charAt(0).toUpperCase()+r.slice(1)+'.' : '';
+  }
 
-  function line(el,c){
-    var W=600,H=262,L=46,R=66,T=32,B=26, all=[];
+  function line(el,c,opt){
+    var big=opt&&opt.big, W=big?1000:600,H=big?430:(opt&&opt.tall?360:262),L=big?52:46,R=big?72:66,T=32,B=26, all=[];
     c.series.forEach(function(s){ s.pts.forEach(function(p){ all.push(p); }); }); if(c.target) all.push([all[0][0],c.target.v]);
+    (c.budgets||[]).forEach(function(b){ all.push([b.a,b.v]); all.push([b.b,b.v]); });
     var xs=all.map(function(p){return p[0];}), ys=all.map(function(p){return p[1];});
     var x0=Math.min.apply(null,xs), x1=Math.max.apply(null,xs);
     var lo=Math.min.apply(null,ys), hi=Math.max.apply(null,ys);
     if(c.zero){ lo=Math.min(lo,0); hi=Math.max(hi,0); }
-    var pad=(hi-lo)*0.12||1; var ticks=niceTicks(lo-(c.zero&&lo===0?0:pad), hi+pad, 4);
+    var pad=(hi-lo)*0.12||1; var ticks=niceTicks(lo-(c.zero&&lo===0?0:pad), hi+pad, big?6:4);
     var y0=ticks[0], y1=ticks[ticks.length-1];
     var X=function(v){return L+(v-x0)/(x1-x0)*(W-L-R);}, Y=function(v){return T+(1-(v-y0)/(y1-y0))*(H-T-B);};
     var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+c.title+'">';
-    // Bandes de crise, dessinées sous la grille ; les étiquettes passent sur une 2e ligne si elles se chevauchent.
-    var lastEnd=[-1e9,-1e9];
-    CRISES.forEach(function(k){
-      var a=c.monthly?k.a:k.a-0.5, b=c.monthly?k.b+1:k.b+0.5;
-      var xa=Math.max(X(a),L), xb=Math.min(X(b),W-R);
-      if(xb-xa<2) return;
-      s+='<rect class="band" x="'+xa+'" y="'+T+'" width="'+(xb-xa)+'" height="'+(H-T-B)+'"></rect>';
-      var cx=(xa+xb)/2, w=k.l.length*5.6, row=(cx-w/2>lastEnd[0]+6)?0:1;
-      lastEnd[row]=cx+w/2;
-      s+='<text class="bandlab" x="'+cx+'" y="'+(row?T-5:T-17)+'" text-anchor="middle">'+k.l+'</text>';
-    });
     ticks.forEach(function(t){
       s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(t)+'" y2="'+Y(t)+'" stroke="var(--grid)" stroke-width="1"></line>';
       s+='<text x="'+(L-8)+'" y="'+(Y(t)+4)+'" text-anchor="end">'+f(t,c.tdec||0)+'</text>';
+    });
+    // Crises : trait à la date de début, étiquette en haut (2e ligne si deux étiquettes se chevauchent).
+    var lastEnd=[-1e9,-1e9], dx=[]; c.series.forEach(function(se){ se.pts.forEach(function(p){ dx.push(p[0]); }); });
+    var dx0=Math.min.apply(null,dx), dx1=Math.max.apply(null,dx);
+    if(!c.nocrises) CRISES.forEach(function(k){
+      var pos=c.monthly? k.y+(k.m-1)/12 : k.y;
+      if(pos<dx0-1e-6 || pos>dx1+1e-6) return;
+      var x=X(pos), w=k.l.length*5.6, anchor='middle', tx=x, left=x-w/2, right=x+w/2;
+      if(right>W-2){ anchor='end'; tx=x+3; left=tx-w; right=tx; } else if(left<2){ anchor='start'; tx=x-3; left=tx; right=tx+w; }
+      var row=(left>lastEnd[0]+6)?0:(left>lastEnd[1]+6)?1:0; lastEnd[row]=right;
+      s+='<line class="cmark" x1="'+x+'" x2="'+x+'" y1="'+(T-2)+'" y2="'+(H-B)+'"></line>';
+      s+='<text class="bandlab" x="'+tx+'" y="'+(row?T-5:T-17)+'" text-anchor="'+anchor+'">'+k.l+'</text>';
     });
     if(c.zero && y0<0) s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(0)+'" y2="'+Y(0)+'" stroke="var(--muted)" stroke-width="1"></line>';
     var xt = c.monthly ? xTicks(Math.ceil(x0), Math.floor(x1)) : xTicks(x0,x1);
     xt.forEach(function(t){ s+='<text x="'+X(t)+'" y="'+(H-6)+'" text-anchor="middle">'+t+'</text>'; });
     (c.breaks||[]).forEach(function(b){
+      if(b<x0 || b>x1) return;
       s+='<line x1="'+X(b)+'" x2="'+X(b)+'" y1="'+T+'" y2="'+(H-B)+'" stroke="var(--mark)" stroke-width="1" stroke-dasharray="2 3"></line>';
     });
     if(c.target){
       s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(c.target.v)+'" y2="'+Y(c.target.v)+'" stroke="var(--mark)" stroke-width="1.5" stroke-dasharray="5 4"></line>';
     }
+    (c.budgets||[]).forEach(function(b){
+      var xa=Math.max(X(b.a-0.5),L), xb=Math.min(X(b.b+0.5),W-R), y=Y(b.v);
+      if(xb-xa<1) return;
+      s+='<line x1="'+xa+'" x2="'+xb+'" y1="'+y+'" y2="'+y+'" stroke="var(--mark)" stroke-width="1.8" stroke-dasharray="5 3"></line>';
+      s+='<text class="blab" x="'+((xa+xb)/2)+'" y="'+(y+13)+'" text-anchor="middle">'+f(b.v,0)+'</text>';
+    });
     var ends=[];
     c.series.forEach(function(se){
       var col = se.alt?'var(--line-alt)':'var(--line)', p=se.pts;
+      if(!p.length) return;
       for(var i=1;i<p.length;i++){
         var gap = (p[i][0]-p[i-1][0])>(se.step||1)+0.01 || se.proj || p[i][2]==='p';
         s+='<line x1="'+X(p[i-1][0])+'" y1="'+Y(p[i-1][1])+'" x2="'+X(p[i][0])+'" y2="'+Y(p[i][1])+'" stroke="'+col+'" stroke-width="'+(gap?1.5:2.2)+'"'+(gap?' stroke-dasharray="4 4"':'')+' stroke-linecap="round"></line>';
       }
-      if(p.length<=60) p.forEach(function(q){ s+='<circle cx="'+X(q[0])+'" cy="'+Y(q[1])+'" r="'+(p.length>12?1.8:3)+'" fill="'+col+'"><title>'+xLabel(q[0],c)+' : '+f(q[1],c.dec)+(c.suf||'')+'</title></circle>'; });
+      if(p.length<=60) p.forEach(function(q){ s+='<circle cx="'+X(q[0])+'" cy="'+Y(q[1])+'" r="'+(p.length>12?1.8:3)+'" fill="'+col+'"></circle>'; });
       var last=p[p.length-1]; ends.push({y:Y(last[1]),x:X(last[0]),t:f(last[1],c.dec)+(c.suf||''),alt:se.alt});
     });
     ends.sort(function(a,b){return a.y-b.y;});
     for(var k=1;k<ends.length;k++){ if(ends[k].y-ends[k-1].y<13) ends[k].y=ends[k-1].y+13; }
     ends.forEach(function(e){ s+='<text class="end" x="'+(e.x+7)+'" y="'+(e.y+4)+'"'+(e.alt?' style="fill:var(--muted)"':'')+'>'+e.t+'</text>'; });
+    s+='<g class="hov"></g><rect class="hit" x="'+L+'" y="'+T+'" width="'+(W-L-R)+'" height="'+(H-T-B)+'"></rect>';
     s+='</svg>';
-    el.innerHTML = head(el,c)+s+foot(c);
+    el.innerHTML = head(el,c)+s+foot(c,opt);
+    hover(el,c,{W:W,H:H,T:T,B:B,X:X,Y:Y});
   }
 
-  function bars(el,c){
+  // Lecture au survol (souris) ou au toucher : année la plus proche, valeur de chaque série.
+  function hover(el,c,m){
+    var svg=el.querySelector('svg'), hit=svg&&svg.querySelector('rect.hit'), g=svg&&svg.querySelector('g.hov');
+    if(!hit||!g) return;
+    var seen={}; c.series.forEach(function(s){ s.pts.forEach(function(p){ seen[p[0]]=1; }); });
+    var xs=Object.keys(seen).map(Number).sort(function(a,b){return a-b;});
+    var tip=document.createElement('div'); tip.className='tip'; tip.hidden=true; el.appendChild(tip);
+    function show(e){
+      var r=svg.getBoundingClientRect(); if(!r.width||!xs.length) return;
+      var sx=(e.clientX-r.left)/r.width*m.W, best=xs[0], bd=1e9;
+      xs.forEach(function(x){ var d=Math.abs(m.X(x)-sx); if(d<bd){ bd=d; best=x; } });
+      var px=m.X(best), html='<b>'+xLabel(best,c)+'</b>', marks='<line class="guide" x1="'+px+'" x2="'+px+'" y1="'+m.T+'" y2="'+(m.H-m.B)+'"></line>';
+      c.series.forEach(function(s){
+        var p=null; for(var i=0;i<s.pts.length;i++){ if(Math.abs(s.pts[i][0]-best)<1e-6){ p=s.pts[i]; break; } }
+        if(!p) return;
+        marks+='<circle class="dot'+(s.alt?' alt':'')+'" cx="'+px+'" cy="'+m.Y(p[1])+'" r="4.5"></circle>';
+        html+='<span>'+s.name+' : <strong>'+f(p[1],c.dec)+(c.suf||'')+'</strong>'+(p[2]==='p'||s.proj?' (provisoire)':'')+'</span>';
+      });
+      (c.budgets||[]).forEach(function(b){ if(best>=b.a-0.5 && best<b.b+0.5) html+='<span>Plafond SNBC '+b.p+' : <strong>'+f(b.v,0)+'</strong></span>'; });
+      g.innerHTML=marks; tip.innerHTML=html; tip.hidden=false;
+      var er=el.getBoundingClientRect(), left=r.left-er.left+px/m.W*r.width, top=r.top-er.top+m.T/m.H*r.height, tw=tip.offsetWidth;
+      left = (left+14+tw > er.width) ? left-14-tw : left+14;
+      tip.style.left=Math.max(0,left)+'px'; tip.style.top=top+'px';
+    }
+    function hide(){ tip.hidden=true; g.innerHTML=''; }
+    hit.addEventListener('pointermove', show);
+    hit.addEventListener('pointerdown', show);
+    hit.addEventListener('pointerleave', function(e){ if(e.pointerType!=='touch') hide(); });
+  }
+  document.addEventListener('pointerdown', function(e){
+    [].forEach.call(document.querySelectorAll('.chart .tip'), function(tp){
+      if(tp.parentNode.contains(e.target)) return;
+      tp.hidden=true; var g=tp.parentNode.querySelector('g.hov'); if(g) g.innerHTML='';
+    });
+  });
+
+  function bars(el,c,opt){
     var W=600,H=240,L=46,R=16,T=12,B=26, v=c.pts.map(function(p){return p[1];});
     var ticks=niceTicks(Math.min(0,Math.min.apply(null,v)), Math.max(0,Math.max.apply(null,v)),4), y0=ticks[0], y1=ticks[ticks.length-1];
     var n=c.pts.length, bw=(W-L-R)/n, Y=function(x){return T+(1-(x-y0)/(y1-y0))*(H-T-B);};
@@ -635,10 +779,10 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
       if(i%Math.ceil(n/8)===0 || i===n-1) s+='<text x="'+(x+bw*0.32)+'" y="'+(H-6)+'" text-anchor="middle">'+p[0]+'</text>';
     });
     s+='</svg>';
-    el.innerHTML = head(el,c)+s+foot(c);
+    el.innerHTML = head(el,c)+s+foot(c,opt);
   }
 
-  function hbar(el,c){
+  function hbar(el,c,opt){
     var W=600,L=170,R=60,rh=30,T=6,H=T+c.rows.length*rh+6, max=Math.max.apply(null,c.rows.map(function(r){return r[1];}));
     var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+c.title+'">';
     c.rows.forEach(function(r,i){
@@ -646,15 +790,15 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
       s+='<text x="'+(L-10)+'" y="'+(y+rh/2+4)+'" text-anchor="end">'+r[0]+'</text><rect x="'+L+'" y="'+(y+7)+'" width="'+w+'" height="'+(rh-14)+'" fill="var(--line)"></rect><text class="end" x="'+(L+w+8)+'" y="'+(y+rh/2+4)+'">'+f(r[1],c.dec||0)+c.suf+'</text>';
     });
     s+='</svg>';
-    el.innerHTML = head(el,c)+s+foot(c);
+    el.innerHTML = head(el,c)+s+foot(c,opt);
   }
 
   function range(a,vals){ return vals.map(function(v,i){ return [a+i,v]; }); }
   function readLine(p,dec,suf,c){ var a=p[0], b=p[p.length-1]; return 'de '+f(a[1],dec)+suf+' en '+xLabel(a[0],c||{})+' à '+f(b[1],dec)+suf+' en '+xLabel(b[0],c||{}); }
 
   var C = {
-    ges:{"type":"line","title":"Émissions de gaz à effet de serre","unit":"Millions de tonnes équivalent CO₂, hors forêts et sols","dec":0,"series":[{"name":"Émissions","pts":[[1990,546.9],[1991,572.5],[1992,561.5],[1993,540.0],[1994,531.7],[1995,538.1],[1996,556.4],[1997,548.6],[1998,562.5],[1999,557.2],[2000,551.9],[2001,557.0],[2002,550.6],[2003,554.7],[2004,554.3],[2005,555.6],[2006,544.9],[2007,535.2],[2008,530.3],[2009,509.2],[2010,513.1],[2011,488.0],[2012,490.7],[2013,490.2],[2014,457.4],[2015,460.8],[2016,463.7],[2017,466.1],[2018,446.5],[2019,437.7],[2020,398.0],[2021,422.4],[2022,405.8],[2023,378.2],[2024,367.0],[2025,359.4,"p"]]}],"src":"Eurostat, inventaire transmis par la France (1990-2024) ; Citepa, Secten 2026 (2025, première estimation, en pointillé)."},
-    gesidx:{"type":"line","title":"Émissions depuis 1990, France et Union européenne","unit":"Indice, base 100 en 1990","dec":1,"series":[{"name":"France","pts":[[1990,100.0],[1991,104.7],[1992,102.7],[1993,98.7],[1994,97.2],[1995,98.4],[1996,101.7],[1997,100.3],[1998,102.8],[1999,101.9],[2000,100.9],[2001,101.8],[2002,100.7],[2003,101.4],[2004,101.3],[2005,101.6],[2006,99.6],[2007,97.9],[2008,97.0],[2009,93.1],[2010,93.8],[2011,89.2],[2012,89.7],[2013,89.6],[2014,83.6],[2015,84.3],[2016,84.8],[2017,85.2],[2018,81.6],[2019,80.0],[2020,72.8],[2021,77.2],[2022,74.2],[2023,69.2],[2024,67.1]]},{"name":"Union européenne","alt":true,"pts":[[1990,100.0],[1991,97.8],[1992,94.7],[1993,93.1],[1994,92.6],[1995,93.7],[1996,95.6],[1997,94.0],[1998,93.2],[1999,91.6],[2000,91.4],[2001,92.4],[2002,92.1],[2003,93.7],[2004,93.7],[2005,93.2],[2006,93.3],[2007,92.2],[2008,90.2],[2009,84.1],[2010,85.7],[2011,83.3],[2012,81.8],[2013,80.0],[2014,77.1],[2015,78.0],[2016,78.0],[2017,78.5],[2018,76.7],[2019,73.4],[2020,67.4],[2021,70.9],[2022,69.0],[2023,63.5],[2024,62.0]]}],"src":"Calculé par TADA à partir des émissions publiées par Eurostat (hors forêts et sols). 1990 est l’année de référence des objectifs européens."},
+    ges:{"type":"line","budgets":[{"a":2015,"b":2018,"v":442,"p":"2015-2018"},{"a":2019,"b":2023,"v":422,"p":"2019-2023"},{"a":2024,"b":2028,"v":342,"p":"2024-2028"},{"a":2029,"b":2033,"v":262,"p":"2029-2033"},{"a":2034,"b":2038,"v":194,"p":"2034-2038"}],"budgetLabel":"Plafond fixé par la SNBC (budget carbone, moyenne annuelle)","title":"Émissions de gaz à effet de serre","unit":"Millions de tonnes équivalent CO₂, hors forêts et sols","dec":0,"series":[{"name":"Émissions","pts":[[1990,546.9],[1991,572.5],[1992,561.5],[1993,540.0],[1994,531.7],[1995,538.1],[1996,556.4],[1997,548.6],[1998,562.5],[1999,557.2],[2000,551.9],[2001,557.0],[2002,550.6],[2003,554.7],[2004,554.3],[2005,555.6],[2006,544.9],[2007,535.2],[2008,530.3],[2009,509.2],[2010,513.1],[2011,488.0],[2012,490.7],[2013,490.2],[2014,457.4],[2015,460.8],[2016,463.7],[2017,466.1],[2018,446.5],[2019,437.7],[2020,398.0],[2021,422.4],[2022,405.8],[2023,378.2],[2024,367.0],[2025,359.4,"p"]]}],"src":"Eurostat, inventaire transmis par la France (1990-2024) ; Citepa, Secten 2026 (2025, première estimation, en pointillé). Plafonds : budgets carbone hors forêts et sols fixés par décret le 18 novembre 2015 (2015-2018), le 21 avril 2020 (2019-2023) et le 16 juillet 2026 (2024-2038)."},
+    gesidx:{"type":"line","title":"Émissions depuis 1990, France et Union européenne","unit":"Indice, base 100 en 1990","dec":1,"series":[{"name":"France","pts":[[1990,100.0],[1991,104.7],[1992,102.7],[1993,98.7],[1994,97.2],[1995,98.4],[1996,101.7],[1997,100.3],[1998,102.8],[1999,101.9],[2000,100.9],[2001,101.8],[2002,100.7],[2003,101.4],[2004,101.3],[2005,101.6],[2006,99.6],[2007,97.9],[2008,97.0],[2009,93.1],[2010,93.8],[2011,89.2],[2012,89.7],[2013,89.6],[2014,83.6],[2015,84.3],[2016,84.8],[2017,85.2],[2018,81.6],[2019,80.0],[2020,72.8],[2021,77.2],[2022,74.2],[2023,69.2],[2024,67.1]]},{"name":"Union européenne","alt":true,"pts":[[1990,100.0],[1991,97.8],[1992,94.7],[1993,93.1],[1994,92.6],[1995,93.7],[1996,95.6],[1997,94.0],[1998,93.2],[1999,91.6],[2000,91.4],[2001,92.4],[2002,92.1],[2003,93.7],[2004,93.7],[2005,93.2],[2006,93.3],[2007,92.2],[2008,90.2],[2009,84.1],[2010,85.7],[2011,83.3],[2012,81.8],[2013,80.0],[2014,77.1],[2015,78.0],[2016,78.0],[2017,78.5],[2018,76.7],[2019,73.4],[2020,67.4],[2021,70.9],[2022,69.0],[2023,63.5],[2024,62.0]]}],"src":"France : indice publié par Eurostat (indicateur de développement durable sdg_13_10, hors forêts et sols). Union européenne : calculé par TADA à partir des émissions publiées par Eurostat, voir le détail ci-dessous. 1990 est l’année de référence des objectifs européens.","calc":"<strong>Pourquoi un indice ?</strong> La France émet environ 370 millions de tonnes par an, l’Union européenne plus de dix fois plus. Pour comparer les deux évolutions sur un même graphique, on exprime chaque année en proportion de 1990. <strong>Formule :</strong> émissions de l’année ÷ émissions de 1990 × 100. <strong>Exemple, France 2024 :</strong> 367,0 millions de tonnes ÷ 546,9 millions de tonnes × 100 = 67,1. Autrement dit, la France a émis en 2024 un tiers de moins qu’en 1990. Eurostat publie lui-même cet indice pour la France, avec le même résultat ; pour l’Union européenne, TADA applique la même formule aux émissions totales publiées par Eurostat (tableau env_air_gge, total hors forêts et sols)."},
     secteurs:{type:'hbar',title:'Répartition des émissions par secteur en 2025',unit:'Millions de tonnes équivalent CO₂ (estimation)',suf:' Mt',
       rows:[['Transports',123],['Agriculture',76.6],['Industrie',58],['Bâtiments',54.6],['Énergie',31.4]],
       src:'Citepa, Secten 2026. Les déchets (environ 4 %) ne sont pas estimés séparément pour 2025.'},
@@ -664,48 +808,85 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
     dette:{"type":"line","title":"Dette publique","unit":"% du PIB, fin d’année","dec":1,"suf":" %","series":[{"name":"France","pts":[[2000,59.7],[2001,59.3],[2002,61.3],[2003,65.4],[2004,66.9],[2005,68.2],[2006,65.4],[2007,65.5],[2008,69.8],[2009,84.1],[2010,86.3],[2011,88.7],[2012,91.7],[2013,94.6],[2014,96.2],[2015,97.0],[2016,98.1],[2017,98.8],[2018,98.5],[2019,98.2],[2020,114.9],[2021,112.8],[2022,111.4],[2023,109.5],[2024,112.6],[2025,115.7]]},{"name":"Union européenne","alt":true,"pts":[[2000,66.6],[2001,65.8],[2002,65.6],[2003,66.8],[2004,67.1],[2005,67.2],[2006,65.0],[2007,62.4],[2008,65.1],[2009,75.7],[2010,80.4],[2011,81.7],[2012,85.0],[2013,86.8],[2014,86.9],[2015,85.0],[2016,84.0],[2017,81.5],[2018,79.4],[2019,77.4],[2020,89.4],[2021,86.6],[2022,82.3],[2023,80.3],[2024,80.3],[2025,81.5]]}],"target":{"v":60,"label":"Valeur de référence européenne : 60 % du PIB","right":true},"src":"Eurostat, dette au sens de Maastricht. Les valeurs pour la France sont celles transmises par l’Insee."},
     deficit:{"type":"line","title":"Solde public","unit":"% du PIB (négatif = déficit)","dec":1,"suf":" %","zero":true,"series":[{"name":"France","pts":[[2000,-1.3],[2001,-1.4],[2002,-3.2],[2003,-4.1],[2004,-3.6],[2005,-3.5],[2006,-2.7],[2007,-3.0],[2008,-3.5],[2009,-7.4],[2010,-7.2],[2011,-5.3],[2012,-5.2],[2013,-4.9],[2014,-4.6],[2015,-3.9],[2016,-3.8],[2017,-3.4],[2018,-2.3],[2019,-2.4],[2020,-8.9],[2021,-6.6],[2022,-4.7],[2023,-5.4],[2024,-5.8],[2025,-5.1]]},{"name":"Union européenne","alt":true,"pts":[[2000,-1.2],[2001,-2.0],[2002,-2.8],[2003,-3.1],[2004,-2.7],[2005,-2.4],[2006,-1.4],[2007,-0.6],[2008,-2.1],[2009,-6.1],[2010,-6.0],[2011,-4.1],[2012,-3.7],[2013,-3.1],[2014,-2.4],[2015,-1.9],[2016,-1.4],[2017,-0.9],[2018,-0.4],[2019,-0.5],[2020,-6.7],[2021,-4.6],[2022,-3.1],[2023,-3.4],[2024,-3.1],[2025,-3.1]]}],"target":{"v":-3,"label":"Valeur de référence européenne : déficit de 3 % du PIB"},"src":"Eurostat. Les valeurs pour la France sont celles transmises par l’Insee."},
     depenses:{"type":"line","title":"Dépenses publiques","unit":"% du PIB","dec":1,"suf":" %","series":[{"name":"France","pts":[[2000,52.6],[2001,52.8],[2002,53.9],[2003,54.4],[2004,54.0],[2005,54.3],[2006,53.8],[2007,53.6],[2008,54.3],[2009,58.0],[2010,57.7],[2011,57.0],[2012,57.9],[2013,58.6],[2014,58.4],[2015,57.6],[2016,57.4],[2017,57.7],[2018,56.4],[2019,55.3],[2020,61.7],[2021,59.5],[2022,58.4],[2023,56.8],[2024,57.0],[2025,57.3]]},{"name":"Union européenne","alt":true,"pts":[[2000,47.4],[2001,47.4],[2002,47.8],[2003,48.1],[2004,47.4],[2005,47.2],[2006,46.6],[2007,45.8],[2008,47.0],[2009,50.9],[2010,50.7],[2011,49.3],[2012,50.0],[2013,50.0],[2014,49.3],[2015,48.3],[2016,47.5],[2017,46.9],[2018,46.6],[2019,46.6],[2020,52.8],[2021,51.1],[2022,49.1],[2023,48.8],[2024,48.9],[2025,49.4]]}],"src":"Eurostat. Les valeurs pour la France sont celles transmises par l’Insee."},
+    interets:{"type":"line","title":"Charge d’intérêts de la dette publique","unit":"Intérêts versés par les administrations publiques, % du PIB","dec":1,"tdec":1,"suf":" %","series":[{"name":"France","pts":range(2000,[3.0,3.1,3.0,2.9,2.8,2.7,2.6,2.7,2.9,2.5,2.5,2.7,2.6,2.3,2.2,2.0,1.9,1.8,1.8,1.5,1.3,1.4,1.9,1.9,2.0,2.2])},{"name":"Union européenne","alt":true,"pts":range(2000,[3.8,3.6,3.4,3.1,3.0,2.8,2.7,2.7,2.8,2.7,2.7,2.9,2.9,2.7,2.5,2.2,2.0,1.8,1.7,1.5,1.4,1.4,1.6,1.7,1.9,1.9])}],"src":"Eurostat, comptes des administrations publiques (intérêts, D.41), mise à jour du 21 octobre 2026. Les valeurs pour la France sont celles transmises par l’Insee : 64,7 milliards d’euros en 2025. Le remboursement du capital emprunté n’est pas une dépense publique et n’est pas compté ici."},
     die:{type:'line',title:'Dépense intérieure d’éducation',unit:'% du PIB',dec:1,suf:' %',
       series:[{name:'Dépense',pts:range(2000,[7.3,7.2,7.2,7.2,7.0,6.9,6.8,6.7,6.7,7.1,7.0,6.8,6.7,6.8,6.8,6.7,6.7,6.7,6.7,6.6,6.9,6.8,6.8,6.7])}],
       src:'Insee d’après DEPP. 2023 provisoire.'},
-    pisa:{type:'line',title:'Score PISA en mathématiques, élèves de 15 ans',unit:'Points (moyenne OCDE initiale : 500)',dec:0,
+    pisa:{type:'line',nocrises:true,title:'Score PISA en mathématiques, élèves de 15 ans',unit:'Points (moyenne OCDE initiale : 500)',dec:0,
       series:[{name:'France',pts:[[2003,511],[2012,495],[2018,495],[2022,474],[2025,458]]}],
       src:'DEPP, notes d’information 23.48 (2012, 2022) et 26.40 (2003, 2025). 2018 calculé à partir de l’écart publié. Score jugé stable de 2006 à 2018 par la DEPP.'},
     chomage:{"type":"line","title":"Taux de chômage","unit":"% des actifs, moyenne annuelle (BIT)","dec":1,"suf":" %","series":[{"name":"France","pts":[[2000,8.5],[2001,7.8],[2002,7.9],[2003,8.5],[2004,8.9],[2005,8.9],[2006,8.9],[2007,8.0],[2008,7.4],[2009,9.1],[2010,9.3],[2011,9.2],[2012,9.8],[2013,10.3],[2014,10.3],[2015,10.4],[2016,10.1],[2017,9.4],[2018,9.1],[2019,8.5],[2020,8.1],[2021,7.9],[2022,7.3],[2023,7.4],[2024,7.4],[2025,7.7]]},{"name":"Union européenne","alt":true,"pts":[[2009,9.3],[2010,10.1],[2011,10.1],[2012,11.1],[2013,11.6],[2014,11.0],[2015,10.2],[2016,9.3],[2017,8.3],[2018,7.4],[2019,6.8],[2020,7.2],[2021,7.1],[2022,6.2],[2023,6.1],[2024,6.0],[2025,6.0]]}],"src":"France : Insee, enquête Emploi (identique aux valeurs d’Eurostat depuis 2003). Union européenne : Eurostat, à partir de 2009."},
     neet:{"type":"line","title":"Jeunes ni en emploi, ni en études, ni en formation","unit":"% des 15-29 ans","dec":1,"suf":" %","breaks":[2021],"series":[{"name":"France","pts":[[2000,13.4],[2001,12.9],[2002,13.2],[2003,12.8],[2004,13.1],[2005,13.2],[2006,13.2],[2007,12.8],[2008,12.6],[2009,14.7],[2010,14.8],[2011,14.7],[2012,15.1],[2013,13.8],[2014,14.1],[2015,14.7],[2016,14.3],[2017,13.8],[2018,13.6],[2019,13.0],[2020,14.0],[2021,12.8],[2022,12.0],[2023,12.3],[2024,12.7],[2025,12.9]]},{"name":"Union européenne","alt":true,"pts":[[2002,15.9],[2003,15.9],[2004,15.6],[2005,15.3],[2006,14.1],[2007,13.2],[2008,13.0],[2009,14.8],[2010,15.4],[2011,15.4],[2012,16.0],[2013,16.1],[2014,15.7],[2015,15.2],[2016,14.5],[2017,13.7],[2018,13.1],[2019,12.5],[2020,13.8],[2021,13.1],[2022,11.7],[2023,11.3],[2024,11.2],[2025,11.0]]}],"src":"Eurostat, enquête sur les forces de travail. Rupture de série en 2021 (nouveau règlement européen)."},
     immigres:{type:'line',title:'Part des immigrés dans la population',unit:'% de la population',dec:1,suf:' %',breaks:[2024],
       series:[{name:'Immigrés',pts:range(2006,[8.1,8.3,8.4,8.4,8.5,8.6,8.8,8.9,9.1,9.3,9.4,9.7,9.8,10.0,10.2,10.2,10.3,10.7,11.3,11.6])}],
-      src:'Insee, recensements et estimations. 2024-2025 provisoires, nouveau protocole de collecte.'},
-    titres:{"type":"line","title":"Premiers titres de séjour délivrés","unit":"Pour 1 000 habitants, par an","dec":1,"series":[{"name":"France","pts":[[2008,2.94],[2009,3.11],[2010,3.15],[2011,3.06],[2012,3.05],[2013,3.26],[2014,3.33],[2015,3.44],[2016,3.56],[2017,3.81],[2018,3.98],[2019,4.27],[2020,3.51],[2021,4.23],[2022,4.79],[2023,4.94],[2024,5.02],[2025,5.47]]},{"name":"Union européenne","alt":true,"pts":[[2013,3.72],[2014,3.99],[2015,4.49],[2016,5.61],[2017,6.07],[2018,6.26],[2019,6.69],[2020,5.22],[2021,7.34],[2022,7.97],[2023,8.51],[2024,7.78],[2025,8.55]]}],"src":"Calculé par TADA à partir des premiers titres de séjour (Eurostat, d’après le ministère de l’Intérieur) et de la population moyenne (Eurostat). Titres d’au moins trois mois délivrés à des ressortissants de pays hors Union européenne."},
+      src:'Insee, recensements et estimations. 2024-2025 provisoires, nouveau protocole de collecte. Pas de moyenne européenne : Eurostat ne publie pas ce chiffre selon la définition française. Il compte toutes les personnes nées à l’étranger, y compris les Français nés à l’étranger, et en nombre plutôt qu’en pourcentage.'},
+    titres:{"type":"line","title":"Premiers titres de séjour délivrés","unit":"Pour 1 000 habitants, par an","dec":1,"series":[{"name":"France","pts":[[2008,2.94],[2009,3.11],[2010,3.15],[2011,3.06],[2012,3.05],[2013,3.26],[2014,3.33],[2015,3.44],[2016,3.56],[2017,3.81],[2018,3.98],[2019,4.27],[2020,3.51],[2021,4.23],[2022,4.79],[2023,4.94],[2024,5.02],[2025,5.47]]},{"name":"Union européenne","alt":true,"pts":[[2013,3.72],[2014,3.99],[2015,4.49],[2016,5.61],[2017,6.07],[2018,6.26],[2019,6.69],[2020,5.22],[2021,7.34],[2022,7.97],[2023,8.51],[2024,7.78],[2025,8.55]]}],"src":"Calculé par TADA à partir des premiers titres de séjour (Eurostat, d’après le ministère de l’Intérieur) et de la population moyenne (Eurostat), voir le détail ci-dessous. Titres d’au moins trois mois délivrés à des ressortissants de pays hors Union européenne.","calc":"<strong>Pourquoi ce calcul ?</strong> La France compte environ 69 millions d’habitants, l’Union européenne environ 450 millions. Comparer les nombres bruts de titres n’aurait donc pas de sens : on rapporte chaque année le nombre de titres à la population. <strong>Formule :</strong> premiers titres de séjour délivrés dans l’année ÷ population moyenne de l’année × 1 000. <strong>Exemple, France 2025 :</strong> 377 500 titres (Eurostat, tableau migr_resfirst) ÷ 68 997 455 habitants (Eurostat, population moyenne, tableau demo_gind) × 1 000 = 5,47 titres pour 1 000 habitants. Le même calcul est fait pour chaque année et pour l’Union européenne. Les nombres bruts de 2025 pour la France figurent dans le graphique suivant, par motif."},
     motifs:{"type":"hbar","title":"Premiers titres de séjour par motif en 2025","unit":"Milliers de titres, France","suf":"","dec":0,"rows":[["Études",118.4],["Autres, dont protection",117.3],["Famille",91.0],["Travail",50.8]],"src":"Eurostat, d’après le ministère de l’Intérieur. « Autres » comprend notamment la protection internationale (asile) et les motifs humanitaires."},
     prixlog:{type:'line',title:'Prix des logements anciens',unit:'Indice, base 100 en 2015 (2e trimestre)',dec:1,
       series:[{name:'Province, maisons',pts:range(2000,[54.0,58.6,63.4,70.4,79.5,91.2,101.9,108.6,110.3,100.0,103.6,108.1,106.5,103.6,102.4,99.9,100.6,103.3,106.1,108.9,114.1,122.7,133.8,135.6,129.6,130.4,128.7])},
               {name:'Île-de-France, appartements',alt:true,pts:range(2000,[39.4,42.5,46.1,51.9,59.4,68.6,78.0,84.0,89.2,82.3,89.4,103.4,105.2,104.2,102.6,99.8,101.4,106.1,111.1,116.7,125.2,128.0,129.0,124.6,116.3,116.6,116.9])}],
       src:'Insee-Notaires. 2026 provisoire.'},
     hpi:{"type":"line","title":"Prix des logements, France et Union européenne","unit":"Indice, base 100 en 2015 (moyenne annuelle)","dec":1,"series":[{"name":"France","pts":[[2005,84.72],[2006,94.51],[2007,100.57],[2008,101.52],[2009,95.32],[2010,99.74],[2011,105.46],[2012,104.88],[2013,102.93],[2014,101.36],[2015,100.0],[2016,101.04],[2017,104.24],[2018,107.29],[2019,110.86],[2020,116.62],[2021,124.13],[2022,131.82],[2023,131.26],[2024,126.39],[2025,127.26]]},{"name":"Union européenne","alt":true,"pts":[[2005,85.85],[2006,94.31],[2007,102.32],[2008,103.67],[2009,99.79],[2010,100.26],[2011,100.88],[2012,98.76],[2013,97.06],[2014,97.75],[2015,100.0],[2016,104.31],[2017,109.31],[2018,114.81],[2019,120.4],[2020,127.15],[2021,137.87],[2022,148.86],[2023,148.44],[2024,153.42],[2025,161.89]]}],"src":"Eurostat, indice des prix des logements (logements neufs et anciens, achats des ménages)."},
-    credit:{"type":"line","monthly":true,"title":"Taux des crédits immobiliers","unit":"Taux d’intérêt moyen des nouveaux crédits à l’habitat, %","dec":2,"tdec":0,"suf":" %","series":[{"name":"France","step":0.08333333333333333,"pts":[[2010.0,3.89],[2010.0833,3.87],[2010.1667,3.82],[2010.25,3.74],[2010.3333,3.7],[2010.4167,3.66],[2010.5,3.62],[2010.5833,3.55],[2010.6667,3.53],[2010.75,3.46],[2010.8333,3.44],[2010.9167,3.42],[2011.0,3.46],[2011.0833,3.54],[2011.1667,3.64],[2011.25,3.7],[2011.3333,3.8],[2011.4167,3.86],[2011.5,3.89],[2011.5833,3.95],[2011.6667,3.93],[2011.75,3.93],[2011.8333,3.95],[2011.9167,3.94],[2012.0,3.98],[2012.0833,4.02],[2012.1667,4.03],[2012.25,3.95],[2012.3333,3.91],[2012.4167,3.83],[2012.5,3.74],[2012.5833,3.67],[2012.6667,3.63],[2012.75,3.54],[2012.8333,3.46],[2012.9167,3.4],[2013.0,3.33],[2013.0833,3.32],[2013.1667,3.27],[2013.25,3.23],[2013.3333,3.19],[2013.4167,3.12],[2013.5,3.09],[2013.5833,3.08],[2013.6667,3.11],[2013.75,3.1],[2013.8333,3.17],[2013.9167,3.17],[2014.0,3.2],[2014.0833,3.19],[2014.1667,3.17],[2014.25,3.14],[2014.3333,3.08],[2014.4167,3.02],[2014.5,2.94],[2014.5833,2.87],[2014.6667,2.82],[2014.75,2.74],[2014.8333,2.67],[2014.9167,2.6],[2015.0,2.55],[2015.0833,2.51],[2015.1667,2.42],[2015.25,2.31],[2015.3333,2.25],[2015.4167,2.17],[2015.5,2.15],[2015.5833,2.18],[2015.6667,2.21],[2015.75,2.25],[2015.8333,2.35],[2015.9167,2.32],[2016.0,2.31],[2016.0833,2.26],[2016.1667,2.18],[2016.25,2.09],[2016.3333,1.97],[2016.4167,1.85],[2016.5,1.77],[2016.5833,1.72],[2016.6667,1.68],[2016.75,1.6],[2016.8333,1.56],[2016.9167,1.5],[2017.0,1.5],[2017.0833,1.54],[2017.1667,1.54],[2017.25,1.57],[2017.3333,1.59],[2017.4167,1.61],[2017.5,1.62],[2017.5833,1.65],[2017.6667,1.65],[2017.75,1.66],[2017.8333,1.64],[2017.9167,1.6],[2018.0,1.61],[2018.0833,1.61],[2018.1667,1.58],[2018.25,1.57],[2018.3333,1.57],[2018.4167,1.55],[2018.5,1.54],[2018.5833,1.53],[2018.6667,1.51],[2018.75,1.51],[2018.8333,1.5],[2018.9167,1.48],[2019.0,1.5],[2019.0833,1.51],[2019.1667,1.5],[2019.25,1.49],[2019.3333,1.44],[2019.4167,1.39],[2019.5,1.34],[2019.5833,1.31],[2019.6667,1.27],[2019.75,1.23],[2019.8333,1.2],[2019.9167,1.17],[2020.0,1.17],[2020.0833,1.19],[2020.1667,1.19],[2020.25,1.36],[2020.3333,1.26],[2020.4167,1.26],[2020.5,1.29],[2020.5833,1.31],[2020.6667,1.3],[2020.75,1.28],[2020.8333,1.27],[2020.9167,1.24],[2021.0,1.24],[2021.0833,1.21],[2021.1667,1.18],[2021.25,1.15],[2021.3333,1.14],[2021.4167,1.12],[2021.5,1.12],[2021.5833,1.12],[2021.6667,1.13],[2021.75,1.13],[2021.8333,1.12],[2021.9167,1.1],[2022.0,1.12],[2022.0833,1.13],[2022.1667,1.14],[2022.25,1.19],[2022.3333,1.26],[2022.4167,1.35],[2022.5,1.45],[2022.5833,1.58],[2022.6667,1.68],[2022.75,1.77],[2022.8333,1.91],[2022.9167,2.05],[2023.0,2.2],[2023.0833,2.35],[2023.1667,2.54],[2023.25,2.71],[2023.3333,2.88],[2023.4167,3.04],[2023.5,3.16],[2023.5833,3.31],[2023.6667,3.36],[2023.75,3.43],[2023.8333,3.52],[2023.9167,3.6],[2024.0,3.59],[2024.0833,3.51],[2024.1667,3.5],[2024.25,3.49],[2024.3333,3.48],[2024.4167,3.43],[2024.5,3.4],[2024.5833,3.37],[2024.6667,3.33],[2024.75,3.27],[2024.8333,3.17],[2024.9167,3.14],[2025.0,3.11],[2025.0833,3.01],[2025.1667,3.05],[2025.25,3.03],[2025.3333,3.02],[2025.4167,3.01],[2025.5,3.01],[2025.5833,3.01],[2025.6667,2.99],[2025.75,2.99],[2025.8333,3.0],[2025.9167,2.99],[2026.0,3.05],[2026.0833,3.1],[2026.1667,3.1],[2026.25,3.11],[2026.3333,3.1],[2026.4167,3.16],[2026.5,3.18],[2026.5833,3.2],[2026.6667,3.19]]},{"name":"Zone euro","alt":true,"step":0.08333333333333333,"pts":[[2010.0,3.63],[2010.0833,3.61],[2010.1667,3.54],[2010.25,3.52],[2010.3333,3.45],[2010.4167,3.39],[2010.5,3.36],[2010.5833,3.4],[2010.6667,3.34],[2010.75,3.31],[2010.8333,3.34],[2010.9167,3.36],[2011.0,3.45],[2011.0833,3.55],[2011.1667,3.63],[2011.25,3.74],[2011.3333,3.83],[2011.4167,3.84],[2011.5,3.86],[2011.5833,3.89],[2011.6667,3.8],[2011.75,3.75],[2011.8333,3.74],[2011.9167,3.75],[2012.0,3.78],[2012.0833,3.77],[2012.1667,3.7],[2012.25,3.64],[2012.3333,3.58],[2012.4167,3.48],[2012.5,3.41],[2012.5833,3.36],[2012.6667,3.3],[2012.75,3.25],[2012.8333,3.21],[2012.9167,3.17],[2013.0,3.14],[2013.0833,3.15],[2013.1667,3.13],[2013.25,3.11],[2013.3333,3.03],[2013.4167,2.98],[2013.5,3.0],[2013.5833,3.03],[2013.6667,3.06],[2013.75,3.06],[2013.8333,3.07],[2013.9167,3.05],[2014.0,3.06],[2014.0833,3.04],[2014.1667,3.0],[2014.25,2.97],[2014.3333,2.91],[2014.4167,2.85],[2014.5,2.78],[2014.5833,2.73],[2014.6667,2.66],[2014.75,2.6],[2014.8333,2.53],[2014.9167,2.48],[2015.0,2.4],[2015.0833,2.37],[2015.1667,2.29],[2015.25,2.24],[2015.3333,2.18],[2015.4167,2.18],[2015.5,2.22],[2015.5833,2.26],[2015.6667,2.25],[2015.75,2.26],[2015.8333,2.27],[2015.9167,2.22],[2016.0,2.23],[2016.0833,2.2],[2016.1667,2.11],[2016.25,2.09],[2016.3333,2.02],[2016.4167,1.96],[2016.5,1.92],[2016.5833,1.9],[2016.6667,1.86],[2016.75,1.81],[2016.8333,1.79],[2016.9167,1.78],[2017.0,1.81],[2017.0833,1.85],[2017.1667,1.85],[2017.25,1.87],[2017.3333,1.87],[2017.4167,1.87],[2017.5,1.88],[2017.5833,1.91],[2017.6667,1.89],[2017.75,1.88],[2017.8333,1.87],[2017.9167,1.83],[2018.0,1.84],[2018.0833,1.84],[2018.1667,1.84],[2018.25,1.83],[2018.3333,1.83],[2018.4167,1.82],[2018.5,1.81],[2018.5833,1.81],[2018.6667,1.79],[2018.75,1.8],[2018.8333,1.81],[2018.9167,1.8],[2019.0,1.82],[2019.0833,1.8],[2019.1667,1.79],[2019.25,1.76],[2019.3333,1.72],[2019.4167,1.68],[2019.5,1.62],[2019.5833,1.56],[2019.6667,1.49],[2019.75,1.45],[2019.8333,1.47],[2019.9167,1.41],[2020.0,1.43],[2020.0833,1.41],[2020.1667,1.39],[2020.25,1.44],[2020.3333,1.42],[2020.4167,1.42],[2020.5,1.4],[2020.5833,1.4],[2020.6667,1.38],[2020.75,1.36],[2020.8333,1.35],[2020.9167,1.32],[2021.0,1.33],[2021.0833,1.31],[2021.1667,1.31],[2021.25,1.31],[2021.3333,1.32],[2021.4167,1.32],[2021.5,1.31],[2021.5833,1.31],[2021.6667,1.3],[2021.75,1.31],[2021.8333,1.32],[2021.9167,1.31],[2022.0,1.33],[2022.0833,1.38],[2022.1667,1.47],[2022.25,1.61],[2022.3333,1.78],[2022.4167,1.97],[2022.5,2.15],[2022.5833,2.26],[2022.6667,2.45],[2022.75,2.67],[2022.8333,2.89],[2022.9167,2.95],[2023.0,3.11],[2023.0833,3.25],[2023.1667,3.38],[2023.25,3.49],[2023.3333,3.59],[2023.4167,3.71],[2023.5,3.77],[2023.5833,3.86],[2023.6667,3.9],[2023.75,3.92],[2023.8333,4.03],[2023.9167,3.98],[2024.0,3.87],[2024.0833,3.84],[2024.1667,3.8],[2024.25,3.81],[2024.3333,3.81],[2024.4167,3.78],[2024.5,3.75],[2024.5833,3.73],[2024.6667,3.64],[2024.75,3.55],[2024.8333,3.47],[2024.9167,3.39],[2025.0,3.25],[2025.0833,3.33],[2025.1667,3.32],[2025.25,3.27],[2025.3333,3.3],[2025.4167,3.3],[2025.5,3.28],[2025.5833,3.31],[2025.6667,3.31],[2025.75,3.31],[2025.8333,3.3],[2025.9167,3.32],[2026.0,3.35],[2026.0833,3.37],[2026.1667,3.35],[2026.25,3.44],[2026.3333,3.48],[2026.4167,3.51],[2026.5,3.54],[2026.5833,3.6],[2026.6667,3.62]]}],"src":"Banque centrale européenne, coût du crédit à l’habitat pour les ménages (nouveaux contrats). Données mensuelles jusqu’en septembre 2026. La comparaison porte sur la zone euro, pas sur l’Union européenne."},
+    credit:{"type":"line","monthly":true,"title":"Taux des crédits immobiliers","unit":"Taux d’intérêt moyen des nouveaux crédits à l’habitat, %","dec":2,"tdec":0,"suf":" %","series":[{"name":"France","step":0.08333333333333333,"pts":[[2010.0,3.89],[2010.0833,3.87],[2010.1667,3.82],[2010.25,3.74],[2010.3333,3.7],[2010.4167,3.66],[2010.5,3.62],[2010.5833,3.55],[2010.6667,3.53],[2010.75,3.46],[2010.8333,3.44],[2010.9167,3.42],[2011.0,3.46],[2011.0833,3.54],[2011.1667,3.64],[2011.25,3.7],[2011.3333,3.8],[2011.4167,3.86],[2011.5,3.89],[2011.5833,3.95],[2011.6667,3.93],[2011.75,3.93],[2011.8333,3.95],[2011.9167,3.94],[2012.0,3.98],[2012.0833,4.02],[2012.1667,4.03],[2012.25,3.95],[2012.3333,3.91],[2012.4167,3.83],[2012.5,3.74],[2012.5833,3.67],[2012.6667,3.63],[2012.75,3.54],[2012.8333,3.46],[2012.9167,3.4],[2013.0,3.33],[2013.0833,3.32],[2013.1667,3.27],[2013.25,3.23],[2013.3333,3.19],[2013.4167,3.12],[2013.5,3.09],[2013.5833,3.08],[2013.6667,3.11],[2013.75,3.1],[2013.8333,3.17],[2013.9167,3.17],[2014.0,3.2],[2014.0833,3.19],[2014.1667,3.17],[2014.25,3.14],[2014.3333,3.08],[2014.4167,3.02],[2014.5,2.94],[2014.5833,2.87],[2014.6667,2.82],[2014.75,2.74],[2014.8333,2.67],[2014.9167,2.6],[2015.0,2.55],[2015.0833,2.51],[2015.1667,2.42],[2015.25,2.31],[2015.3333,2.25],[2015.4167,2.17],[2015.5,2.15],[2015.5833,2.18],[2015.6667,2.21],[2015.75,2.25],[2015.8333,2.35],[2015.9167,2.32],[2016.0,2.31],[2016.0833,2.26],[2016.1667,2.18],[2016.25,2.09],[2016.3333,1.97],[2016.4167,1.85],[2016.5,1.77],[2016.5833,1.72],[2016.6667,1.68],[2016.75,1.6],[2016.8333,1.56],[2016.9167,1.5],[2017.0,1.5],[2017.0833,1.54],[2017.1667,1.54],[2017.25,1.57],[2017.3333,1.59],[2017.4167,1.61],[2017.5,1.62],[2017.5833,1.65],[2017.6667,1.65],[2017.75,1.66],[2017.8333,1.64],[2017.9167,1.6],[2018.0,1.61],[2018.0833,1.61],[2018.1667,1.58],[2018.25,1.57],[2018.3333,1.57],[2018.4167,1.55],[2018.5,1.54],[2018.5833,1.53],[2018.6667,1.51],[2018.75,1.51],[2018.8333,1.5],[2018.9167,1.48],[2019.0,1.5],[2019.0833,1.51],[2019.1667,1.5],[2019.25,1.49],[2019.3333,1.44],[2019.4167,1.39],[2019.5,1.34],[2019.5833,1.31],[2019.6667,1.27],[2019.75,1.23],[2019.8333,1.2],[2019.9167,1.17],[2020.0,1.17],[2020.0833,1.19],[2020.1667,1.19],[2020.25,1.36],[2020.3333,1.26],[2020.4167,1.26],[2020.5,1.29],[2020.5833,1.31],[2020.6667,1.3],[2020.75,1.28],[2020.8333,1.27],[2020.9167,1.24],[2021.0,1.24],[2021.0833,1.21],[2021.1667,1.18],[2021.25,1.15],[2021.3333,1.14],[2021.4167,1.12],[2021.5,1.12],[2021.5833,1.12],[2021.6667,1.13],[2021.75,1.13],[2021.8333,1.12],[2021.9167,1.1],[2022.0,1.12],[2022.0833,1.13],[2022.1667,1.14],[2022.25,1.19],[2022.3333,1.26],[2022.4167,1.35],[2022.5,1.45],[2022.5833,1.58],[2022.6667,1.68],[2022.75,1.77],[2022.8333,1.91],[2022.9167,2.05],[2023.0,2.2],[2023.0833,2.35],[2023.1667,2.54],[2023.25,2.71],[2023.3333,2.88],[2023.4167,3.04],[2023.5,3.16],[2023.5833,3.31],[2023.6667,3.36],[2023.75,3.43],[2023.8333,3.52],[2023.9167,3.6],[2024.0,3.59],[2024.0833,3.51],[2024.1667,3.5],[2024.25,3.49],[2024.3333,3.48],[2024.4167,3.43],[2024.5,3.4],[2024.5833,3.37],[2024.6667,3.33],[2024.75,3.27],[2024.8333,3.17],[2024.9167,3.14],[2025.0,3.11],[2025.0833,3.01],[2025.1667,3.05],[2025.25,3.03],[2025.3333,3.02],[2025.4167,3.01],[2025.5,3.01],[2025.5833,3.01],[2025.6667,2.99],[2025.75,2.99],[2025.8333,3.0],[2025.9167,2.99],[2026.0,3.05],[2026.0833,3.1],[2026.1667,3.1],[2026.25,3.11],[2026.3333,3.1],[2026.4167,3.16],[2026.5,3.18],[2026.5833,3.2],[2026.6667,3.19]]},{"name":"Zone euro","alt":true,"step":0.08333333333333333,"pts":[[2010.0,3.63],[2010.0833,3.61],[2010.1667,3.54],[2010.25,3.52],[2010.3333,3.45],[2010.4167,3.39],[2010.5,3.36],[2010.5833,3.4],[2010.6667,3.34],[2010.75,3.31],[2010.8333,3.34],[2010.9167,3.36],[2011.0,3.45],[2011.0833,3.55],[2011.1667,3.63],[2011.25,3.74],[2011.3333,3.83],[2011.4167,3.84],[2011.5,3.86],[2011.5833,3.89],[2011.6667,3.8],[2011.75,3.75],[2011.8333,3.74],[2011.9167,3.75],[2012.0,3.78],[2012.0833,3.77],[2012.1667,3.7],[2012.25,3.64],[2012.3333,3.58],[2012.4167,3.48],[2012.5,3.41],[2012.5833,3.36],[2012.6667,3.3],[2012.75,3.25],[2012.8333,3.21],[2012.9167,3.17],[2013.0,3.14],[2013.0833,3.15],[2013.1667,3.13],[2013.25,3.11],[2013.3333,3.03],[2013.4167,2.98],[2013.5,3.0],[2013.5833,3.03],[2013.6667,3.06],[2013.75,3.06],[2013.8333,3.07],[2013.9167,3.05],[2014.0,3.06],[2014.0833,3.04],[2014.1667,3.0],[2014.25,2.97],[2014.3333,2.91],[2014.4167,2.85],[2014.5,2.78],[2014.5833,2.73],[2014.6667,2.66],[2014.75,2.6],[2014.8333,2.53],[2014.9167,2.48],[2015.0,2.4],[2015.0833,2.37],[2015.1667,2.29],[2015.25,2.24],[2015.3333,2.18],[2015.4167,2.18],[2015.5,2.22],[2015.5833,2.26],[2015.6667,2.25],[2015.75,2.26],[2015.8333,2.27],[2015.9167,2.22],[2016.0,2.23],[2016.0833,2.2],[2016.1667,2.11],[2016.25,2.09],[2016.3333,2.02],[2016.4167,1.96],[2016.5,1.92],[2016.5833,1.9],[2016.6667,1.86],[2016.75,1.81],[2016.8333,1.79],[2016.9167,1.78],[2017.0,1.81],[2017.0833,1.85],[2017.1667,1.85],[2017.25,1.87],[2017.3333,1.87],[2017.4167,1.87],[2017.5,1.88],[2017.5833,1.91],[2017.6667,1.89],[2017.75,1.88],[2017.8333,1.87],[2017.9167,1.83],[2018.0,1.84],[2018.0833,1.84],[2018.1667,1.84],[2018.25,1.83],[2018.3333,1.83],[2018.4167,1.82],[2018.5,1.81],[2018.5833,1.81],[2018.6667,1.79],[2018.75,1.8],[2018.8333,1.81],[2018.9167,1.8],[2019.0,1.82],[2019.0833,1.8],[2019.1667,1.79],[2019.25,1.76],[2019.3333,1.72],[2019.4167,1.68],[2019.5,1.62],[2019.5833,1.56],[2019.6667,1.49],[2019.75,1.45],[2019.8333,1.47],[2019.9167,1.41],[2020.0,1.43],[2020.0833,1.41],[2020.1667,1.39],[2020.25,1.44],[2020.3333,1.42],[2020.4167,1.42],[2020.5,1.4],[2020.5833,1.4],[2020.6667,1.38],[2020.75,1.36],[2020.8333,1.35],[2020.9167,1.32],[2021.0,1.33],[2021.0833,1.31],[2021.1667,1.31],[2021.25,1.31],[2021.3333,1.32],[2021.4167,1.32],[2021.5,1.31],[2021.5833,1.31],[2021.6667,1.3],[2021.75,1.31],[2021.8333,1.32],[2021.9167,1.31],[2022.0,1.33],[2022.0833,1.38],[2022.1667,1.47],[2022.25,1.61],[2022.3333,1.78],[2022.4167,1.97],[2022.5,2.15],[2022.5833,2.26],[2022.6667,2.45],[2022.75,2.67],[2022.8333,2.89],[2022.9167,2.95],[2023.0,3.11],[2023.0833,3.25],[2023.1667,3.38],[2023.25,3.49],[2023.3333,3.59],[2023.4167,3.71],[2023.5,3.77],[2023.5833,3.86],[2023.6667,3.9],[2023.75,3.92],[2023.8333,4.03],[2023.9167,3.98],[2024.0,3.87],[2024.0833,3.84],[2024.1667,3.8],[2024.25,3.81],[2024.3333,3.81],[2024.4167,3.78],[2024.5,3.75],[2024.5833,3.73],[2024.6667,3.64],[2024.75,3.55],[2024.8333,3.47],[2024.9167,3.39],[2025.0,3.25],[2025.0833,3.33],[2025.1667,3.32],[2025.25,3.27],[2025.3333,3.3],[2025.4167,3.3],[2025.5,3.28],[2025.5833,3.31],[2025.6667,3.31],[2025.75,3.31],[2025.8333,3.3],[2025.9167,3.32],[2026.0,3.35],[2026.0833,3.37],[2026.1667,3.35],[2026.25,3.44],[2026.3333,3.48],[2026.4167,3.51],[2026.5,3.54],[2026.5833,3.6],[2026.6667,3.62]]}],"src":"Banque centrale européenne, coût du crédit à l’habitat pour les ménages (nouveaux contrats). Données mensuelles jusqu’en septembre 2026. La comparaison porte sur la zone euro, pas sur l’Union européenne. Taux d’intérêt seul, hors assurance emprunteur et frais : le coût total d’un crédit (le TAEG) est plus élevé. C’est aussi une moyenne de tous les crédits signés dans le mois, toutes durées confondues. Sur un champ un peu différent (nouveaux crédits hors renégociations), la Banque de France publie 3,32 % pour septembre 2026."},
     pauvrete:{"type":"line","title":"Taux de pauvreté","unit":"% de la population, seuil de 60 % du revenu médian","dec":1,"suf":" %","breaks":[2020,2022],"series":[{"name":"France","pts":[[2004,13.5],[2005,13.0],[2006,13.2],[2007,13.1],[2008,12.5],[2009,12.9],[2010,13.3],[2011,14.0],[2012,14.1],[2013,13.7],[2014,13.3],[2015,13.6],[2016,13.6],[2017,13.2],[2018,13.4],[2019,13.6],[2020,14.2],[2021,14.3],[2022,15.6],[2023,15.4],[2024,15.9],[2025,16.3]]},{"name":"Union européenne","alt":true,"pts":[[2013,16.8],[2014,17.3],[2015,17.4],[2016,17.5],[2017,16.9],[2018,16.8],[2019,16.5],[2020,16.7],[2021,16.8],[2022,16.5],[2023,16.2],[2024,16.2],[2025,16.3]]}],"src":"Eurostat, enquête SRCV (EU-SILC), menée en France par l’Insee. Année de l’enquête : les revenus portent sur l’année précédente. Ruptures de série en France en 2020 et 2022."},
     pauv1824:{"type":"line","title":"Taux de pauvreté des 18-24 ans","unit":"% des 18-24 ans, seuil de 60 % du revenu médian","dec":1,"suf":" %","breaks":[2020,2022],"series":[{"name":"France","pts":[[2004,20.5],[2005,18.4],[2006,20.7],[2007,21.1],[2008,21.0],[2009,21.1],[2010,24.3],[2011,22.4],[2012,23.0],[2013,22.9],[2014,21.2],[2015,17.9],[2016,21.9],[2017,19.8],[2018,19.0],[2019,21.7],[2020,22.7],[2021,21.2],[2022,22.1],[2023,20.8],[2024,21.9],[2025,22.8]]},{"name":"Union européenne","alt":true,"pts":[[2013,22.7],[2014,23.8],[2015,23.6],[2016,24.0],[2017,23.0],[2018,22.7],[2019,22.5],[2020,23.5],[2021,22.4],[2022,21.8],[2023,21.4],[2024,21.4],[2025,21.8]]}],"src":"Eurostat, enquête SRCV (EU-SILC). Année de l’enquête : les revenus portent sur l’année précédente."},
     gini:{"type":"line","title":"Indice de Gini","unit":"0 = égalité parfaite, 100 = inégalité maximale","dec":1,"breaks":[2008,2020,2022],"series":[{"name":"France","pts":[[2004,28.2],[2005,27.7],[2006,27.3],[2007,26.6],[2008,29.8],[2009,29.9],[2010,29.8],[2011,30.8],[2012,30.5],[2013,30.1],[2014,29.2],[2015,29.2],[2016,29.3],[2017,28.8],[2018,28.5],[2019,29.2],[2020,29.2],[2021,29.3],[2022,29.8],[2023,29.7],[2024,30.0],[2025,30.4]]},{"name":"Union européenne","alt":true,"pts":[[2010,30.2],[2011,30.5],[2012,30.4],[2013,30.6],[2014,30.9],[2015,30.8],[2016,30.6],[2017,30.3],[2018,30.4],[2019,30.1],[2020,30.0],[2021,30.2],[2022,29.6],[2023,29.6],[2024,29.4],[2025,29.2]]}],"src":"Eurostat, enquête SRCV (EU-SILC). Année de l’enquête : les revenus portent sur l’année précédente. Ruptures de série en France en 2008, 2020 et 2022."},
     inflation:{"type":"line","monthly":true,"title":"Inflation sur un an","unit":"Hausse des prix sur douze mois, % (indice des prix harmonisé)","dec":1,"suf":" %","zero":true,"series":[{"name":"France","step":0.08333333333333333,"pts":[[2010.0,1.2],[2010.0833,1.4],[2010.1667,1.7],[2010.25,1.9],[2010.3333,1.9],[2010.4167,1.7],[2010.5,1.9],[2010.5833,1.6],[2010.6667,1.8],[2010.75,1.8],[2010.8333,1.8],[2010.9167,2.0],[2011.0,2.0],[2011.0833,1.8],[2011.1667,2.2],[2011.25,2.2],[2011.3333,2.2],[2011.4167,2.3],[2011.5,2.1],[2011.5833,2.4],[2011.6667,2.4],[2011.75,2.5],[2011.8333,2.7],[2011.9167,2.7],[2012.0,2.6],[2012.0833,2.5],[2012.1667,2.6],[2012.25,2.4],[2012.3333,2.3],[2012.4167,2.3],[2012.5,2.2],[2012.5833,2.4],[2012.6667,2.2],[2012.75,2.1],[2012.8333,1.6],[2012.9167,1.5],[2013.0,1.4],[2013.0833,1.2],[2013.1667,1.1],[2013.25,0.8],[2013.3333,0.9],[2013.4167,1.0],[2013.5,1.2],[2013.5833,1.0],[2013.6667,1.0],[2013.75,0.7],[2013.8333,0.8],[2013.9167,0.8],[2014.0,0.8],[2014.0833,1.1],[2014.1667,0.8],[2014.25,0.8],[2014.3333,0.8],[2014.4167,0.6],[2014.5,0.6],[2014.5833,0.5],[2014.6667,0.4],[2014.75,0.5],[2014.8333,0.4],[2014.9167,0.1],[2015.0,-0.4],[2015.0833,-0.3],[2015.1667,0.0],[2015.25,0.1],[2015.3333,0.3],[2015.4167,0.3],[2015.5,0.2],[2015.5833,0.1],[2015.6667,0.1],[2015.75,0.2],[2015.8333,0.1],[2015.9167,0.3],[2016.0,0.3],[2016.0833,-0.1],[2016.1667,-0.1],[2016.25,-0.1],[2016.3333,0.1],[2016.4167,0.3],[2016.5,0.4],[2016.5833,0.4],[2016.6667,0.5],[2016.75,0.5],[2016.8333,0.7],[2016.9167,0.8],[2017.0,1.6],[2017.0833,1.4],[2017.1667,1.4],[2017.25,1.4],[2017.3333,0.9],[2017.4167,0.8],[2017.5,0.8],[2017.5833,1.0],[2017.6667,1.1],[2017.75,1.2],[2017.8333,1.2],[2017.9167,1.2],[2018.0,1.5],[2018.0833,1.3],[2018.1667,1.7],[2018.25,1.8],[2018.3333,2.3],[2018.4167,2.3],[2018.5,2.6],[2018.5833,2.6],[2018.6667,2.5],[2018.75,2.5],[2018.8333,2.2],[2018.9167,1.9],[2019.0,1.4],[2019.0833,1.6],[2019.1667,1.3],[2019.25,1.5],[2019.3333,1.1],[2019.4167,1.4],[2019.5,1.3],[2019.5833,1.3],[2019.6667,1.1],[2019.75,0.9],[2019.8333,1.2],[2019.9167,1.6],[2020.0,1.7],[2020.0833,1.6],[2020.1667,0.8],[2020.25,0.4],[2020.3333,0.4],[2020.4167,0.2],[2020.5,0.9],[2020.5833,0.2],[2020.6667,0.0],[2020.75,0.1],[2020.8333,0.2],[2020.9167,0.0],[2021.0,0.8],[2021.0833,0.8],[2021.1667,1.4],[2021.25,1.6],[2021.3333,1.8],[2021.4167,1.9],[2021.5,1.5],[2021.5833,2.4],[2021.6667,2.7],[2021.75,3.2],[2021.8333,3.4],[2021.9167,3.4],[2022.0,3.3],[2022.0833,4.2],[2022.1667,5.1],[2022.25,5.4],[2022.3333,5.8],[2022.4167,6.5],[2022.5,6.8],[2022.5833,6.6],[2022.6667,6.2],[2022.75,7.1],[2022.8333,7.1],[2022.9167,6.7],[2023.0,7.0],[2023.0833,7.3],[2023.1667,6.7],[2023.25,6.9],[2023.3333,6.0],[2023.4167,5.3],[2023.5,5.1],[2023.5833,5.7],[2023.6667,5.7],[2023.75,4.5],[2023.8333,3.9],[2023.9167,4.1],[2024.0,3.4],[2024.0833,3.2],[2024.1667,2.4],[2024.25,2.4],[2024.3333,2.6],[2024.4167,2.5],[2024.5,2.7],[2024.5833,2.2],[2024.6667,1.4],[2024.75,1.6],[2024.8333,1.7],[2024.9167,1.8],[2025.0,1.8],[2025.0833,0.9],[2025.1667,0.9],[2025.25,0.9],[2025.3333,0.6],[2025.4167,0.9],[2025.5,0.9],[2025.5833,0.8],[2025.6667,1.1],[2025.75,0.8],[2025.8333,0.8],[2025.9167,0.7],[2026.0,0.4],[2026.0833,1.1],[2026.1667,2.0],[2026.25,2.5],[2026.3333,2.8],[2026.4167,2.0],[2026.5,2.4],[2026.5833,2.6],[2026.6667,3.4],[2026.75,3.8,"p"]]},{"name":"Union européenne","alt":true,"step":0.08333333333333333,"pts":[[2010.0,1.3],[2010.0833,1.2],[2010.1667,1.8],[2010.25,1.8],[2010.3333,1.8],[2010.4167,1.6],[2010.5,1.9],[2010.5833,1.8],[2010.6667,2.1],[2010.75,2.2],[2010.8333,2.2],[2010.9167,2.5],[2011.0,2.5],[2011.0833,2.6],[2011.1667,2.9],[2011.25,3.0],[2011.3333,3.0],[2011.4167,2.9],[2011.5,2.7],[2011.5833,2.7],[2011.6667,3.0],[2011.75,3.1],[2011.8333,3.1],[2011.9167,2.8],[2012.0,2.8],[2012.0833,2.8],[2012.1667,2.8],[2012.25,2.7],[2012.3333,2.5],[2012.4167,2.5],[2012.5,2.5],[2012.5833,2.7],[2012.6667,2.8],[2012.75,2.7],[2012.8333,2.3],[2012.9167,2.3],[2013.0,2.0],[2013.0833,1.9],[2013.1667,1.7],[2013.25,1.2],[2013.3333,1.4],[2013.4167,1.5],[2013.5,1.6],[2013.5833,1.3],[2013.6667,1.0],[2013.75,0.7],[2013.8333,0.8],[2013.9167,0.8],[2014.0,0.7],[2014.0833,0.7],[2014.1667,0.4],[2014.25,0.6],[2014.3333,0.5],[2014.4167,0.5],[2014.5,0.4],[2014.5833,0.3],[2014.6667,0.3],[2014.75,0.3],[2014.8333,0.3],[2014.9167,-0.2],[2015.0,-0.6],[2015.0833,-0.3],[2015.1667,-0.1],[2015.25,0.1],[2015.3333,0.5],[2015.4167,0.4],[2015.5,0.4],[2015.5833,0.3],[2015.6667,0.1],[2015.75,0.3],[2015.8333,0.1],[2015.9167,0.2],[2016.0,0.3],[2016.0833,-0.2],[2016.1667,-0.1],[2016.25,-0.3],[2016.3333,-0.2],[2016.4167,0.0],[2016.5,0.1],[2016.5833,0.2],[2016.6667,0.3],[2016.75,0.5],[2016.8333,0.6],[2016.9167,1.1],[2017.0,1.7],[2017.0833,1.9],[2017.1667,1.5],[2017.25,1.8],[2017.3333,1.4],[2017.4167,1.3],[2017.5,1.4],[2017.5833,1.6],[2017.6667,1.6],[2017.75,1.5],[2017.8333,1.6],[2017.9167,1.4],[2018.0,1.4],[2018.0833,1.2],[2018.1667,1.4],[2018.25,1.3],[2018.3333,2.0],[2018.4167,2.0],[2018.5,2.2],[2018.5833,2.1],[2018.6667,2.1],[2018.75,2.3],[2018.8333,1.9],[2018.9167,1.6],[2019.0,1.4],[2019.0833,1.6],[2019.1667,1.6],[2019.25,1.9],[2019.3333,1.5],[2019.4167,1.5],[2019.5,1.3],[2019.5833,1.3],[2019.6667,1.1],[2019.75,1.0],[2019.8333,1.3],[2019.9167,1.6],[2020.0,1.7],[2020.0833,1.6],[2020.1667,1.1],[2020.25,0.6],[2020.3333,0.5],[2020.4167,0.7],[2020.5,0.8],[2020.5833,0.4],[2020.6667,0.2],[2020.75,0.2],[2020.8333,0.2],[2020.9167,0.2],[2021.0,1.2],[2021.0833,1.3],[2021.1667,1.7],[2021.25,2.0],[2021.3333,2.3],[2021.4167,2.2],[2021.5,2.5],[2021.5833,3.2],[2021.6667,3.6],[2021.75,4.4],[2021.8333,5.2],[2021.9167,5.3],[2022.0,5.6],[2022.0833,6.2],[2022.1667,7.8],[2022.25,8.1],[2022.3333,8.8],[2022.4167,9.6],[2022.5,9.8],[2022.5833,10.1],[2022.6667,10.9],[2022.75,11.5],[2022.8333,11.1],[2022.9167,10.4],[2023.0,10.0],[2023.0833,9.9],[2023.1667,8.3],[2023.25,8.1],[2023.3333,7.1],[2023.4167,6.4],[2023.5,6.1],[2023.5833,5.9],[2023.6667,4.9],[2023.75,3.6],[2023.8333,3.1],[2023.9167,3.4],[2024.0,3.1],[2024.0833,2.8],[2024.1667,2.6],[2024.25,2.6],[2024.3333,2.7],[2024.4167,2.6],[2024.5,2.8],[2024.5833,2.4],[2024.6667,2.1],[2024.75,2.3],[2024.8333,2.5],[2024.9167,2.7],[2025.0,2.8],[2025.0833,2.7],[2025.1667,2.5],[2025.25,2.4],[2025.3333,2.2],[2025.4167,2.3],[2025.5,2.4],[2025.5833,2.4],[2025.6667,2.6],[2025.75,2.5],[2025.8333,2.4],[2025.9167,2.3],[2026.0,2.0],[2026.0833,2.1],[2026.1667,2.8],[2026.25,3.2],[2026.3333,3.3],[2026.4167,2.9],[2026.5,3.0],[2026.5833,3.2],[2026.6667,3.8]]}],"src":"Eurostat, indice des prix à la consommation harmonisé (IPCH), données mensuelles. Octobre 2026 : estimation rapide pour la France (pointillé), septembre 2026 pour l’Union européenne."},
-    pouvoir:{"type":"line","title":"Pouvoir d’achat par habitant","unit":"Revenu disponible ajusté réel par habitant, base 100 en 2010","dec":1,"series":[{"name":"France","pts":[[2000,86.19],[2001,88.18],[2002,90.41],[2003,91.0],[2004,92.26],[2005,92.99],[2006,95.0],[2007,97.32],[2008,97.45],[2009,98.79],[2010,100.0],[2011,100.12],[2012,99.87],[2013,98.93],[2014,99.91],[2015,100.52],[2016,101.71],[2017,103.08],[2018,103.55],[2019,105.37],[2020,103.51],[2021,107.8],[2022,108.54],[2023,109.31],[2024,111.38],[2025,110.86]]},{"name":"Union européenne","alt":true,"pts":[[2000,88.53],[2001,90.99],[2002,92.11],[2003,93.26],[2004,94.58],[2005,95.6],[2006,97.48],[2007,98.91],[2008,99.79],[2009,100.22],[2010,100.0],[2011,99.9],[2012,98.42],[2013,98.03],[2014,99.12],[2015,101.05],[2016,103.34],[2017,105.08],[2018,106.8],[2019,108.97],[2020,109.1],[2021,112.61],[2022,113.12],[2023,113.98],[2024,116.93],[2025,117.89]]}],"src":"Eurostat, comptes des ménages. 2024 et 2025 provisoires."},
+    pouvoir:{"type":"line","title":"Pouvoir d’achat par habitant","unit":"Indice, 100 = niveau de 2010 (revenu par habitant, corrigé de la hausse des prix)","howto":"<strong>Comment lire :</strong> 110,9 en 2025 signifie que le revenu moyen par habitant, services publics compris et une fois la hausse des prix déduite, était 10,9 % plus élevé qu’en 2010. Ce n’est pas un montant en euros. D’autres façons de mesurer le pouvoir d’achat, année par année, sont comparées plus bas : <a href=\"#div-pouvoir\">Le pouvoir d’achat a-t-il augmenté ?</a>","dec":1,"series":[{"name":"France","pts":[[2000,86.19],[2001,88.18],[2002,90.41],[2003,91.0],[2004,92.26],[2005,92.99],[2006,95.0],[2007,97.32],[2008,97.45],[2009,98.79],[2010,100.0],[2011,100.12],[2012,99.87],[2013,98.93],[2014,99.91],[2015,100.52],[2016,101.71],[2017,103.08],[2018,103.55],[2019,105.37],[2020,103.51],[2021,107.8],[2022,108.54],[2023,109.31],[2024,111.38],[2025,110.86]]},{"name":"Union européenne","alt":true,"pts":[[2000,88.53],[2001,90.99],[2002,92.11],[2003,93.26],[2004,94.58],[2005,95.6],[2006,97.48],[2007,98.91],[2008,99.79],[2009,100.22],[2010,100.0],[2011,99.9],[2012,98.42],[2013,98.03],[2014,99.12],[2015,101.05],[2016,103.34],[2017,105.08],[2018,106.8],[2019,108.97],[2020,109.1],[2021,112.61],[2022,113.12],[2023,113.98],[2024,116.93],[2025,117.89]]}],"src":"Eurostat, comptes des ménages (tableau nasa_10_ki, série publiée en base 100 en 2010). 2024 et 2025 provisoires. Mesure « ajustée » : elle inclut la valeur des services publics dont bénéficient directement les ménages (santé, éducation) et se rapporte au nombre d’habitants, sans tenir compte de la taille des ménages. Les autres mesures sont dans « Quand les chiffres divergent »."},
     pensions:{"type":"line","title":"Dépenses de pensions","unit":"% du PIB","dec":1,"suf":" %","series":[{"name":"France","pts":[[2000,12.8],[2001,12.8],[2002,12.8],[2003,12.9],[2004,12.9],[2005,13.0],[2006,13.1],[2007,13.2],[2008,13.4],[2009,14.4],[2010,14.4],[2011,14.5],[2012,14.9],[2013,15.1],[2014,15.2],[2015,15.2],[2016,15.3],[2017,15.2],[2018,15.1],[2019,14.9],[2020,16.1],[2021,15.0],[2022,14.8],[2023,14.6],[2024,15.0]]},{"name":"Union européenne","alt":true,"pts":[[2008,11.8],[2009,12.8],[2010,12.7],[2011,12.7],[2012,12.9],[2013,13.2],[2014,13.1],[2015,13.0],[2016,12.9],[2017,12.7],[2018,12.6],[2019,12.6],[2020,13.5],[2021,12.8],[2022,12.2],[2023,12.3],[2024,12.6]]}],"src":"Eurostat, comptes de la protection sociale (Sespros). Comprend les pensions de vieillesse, de réversion, d’invalidité et les préretraites. 2024 provisoire."},
-    ratio:{"type":"line","title":"Personnes de 15 à 64 ans pour une personne de 65 ans ou plus","unit":"Rapport démographique","dec":1,"tdec":1,"series":[{"name":"France","pts":[[2000,4.12],[2001,4.08],[2002,4.05],[2003,4.03],[2004,4.02],[2005,3.98],[2006,3.98],[2007,3.98],[2008,3.97],[2009,3.94],[2010,3.91],[2011,3.86],[2012,3.75],[2013,3.64],[2014,3.53],[2015,3.42],[2016,3.32],[2017,3.24],[2018,3.16],[2019,3.1],[2020,3.03],[2021,2.99],[2022,2.96],[2023,2.92],[2024,2.87],[2025,2.82]]},{"name":"Union européenne","alt":true,"pts":[[2001,4.27],[2002,4.2],[2003,4.15],[2004,4.1],[2005,4.05],[2006,3.98],[2007,3.94],[2008,3.89],[2009,3.85],[2010,3.8],[2011,3.76],[2012,3.69],[2014,3.52],[2015,3.45],[2016,3.38],[2017,3.31],[2018,3.25],[2019,3.18],[2020,3.12],[2021,3.07],[2022,3.02],[2023,2.99],[2024,2.95],[2025,2.9]]}],"src":"Calculé par TADA à partir du taux de dépendance des personnes âgées publié par Eurostat. Pas de valeur publiée pour l’Union européenne en 2013."},
+    dependance:{"type":"line","title":"Personnes de 65 ans ou plus pour 100 personnes de 15 à 64 ans","unit":"Taux de dépendance des personnes âgées, au 1er janvier","dec":1,"breaks":[2012,2014],"series":[{"name":"France","pts":range(2000,[24.3,24.5,24.7,24.8,24.9,25.1,25.1,25.1,25.2,25.4,25.6,25.9,26.7,27.5,28.3,29.2,30.1,30.9,31.6,32.3,33.0,33.4,33.8,34.3,34.9,35.5])},{"name":"Union européenne","alt":true,"pts":[[2001,23.4],[2002,23.8],[2003,24.1],[2004,24.4],[2005,24.7],[2006,25.1],[2007,25.4],[2008,25.7],[2009,26.0],[2010,26.3],[2011,26.6],[2012,27.1],[2014,28.4],[2015,29.0],[2016,29.6],[2017,30.2],[2018,30.8],[2019,31.4],[2020,32.0],[2021,32.6],[2022,33.1],[2023,33.4],[2024,33.9],[2025,34.5]]}],"src":"Eurostat, indicateurs de structure de la population, mise à jour du 25 septembre 2026. Valeurs publiées par Eurostat. Ruptures de série signalées pour la France en 2012 et 2014 ; pas de valeur publiée pour l’Union européenne en 2000 et 2013. 2023-2025 provisoires pour la France."},
     ev:{"type":"line","title":"Espérance de vie à la naissance","unit":"Années","dec":1,"breaks":[2014],"series":[{"name":"France","pts":[[2000,79.2],[2001,79.3],[2002,79.4],[2003,79.3],[2004,80.3],[2005,80.3],[2006,80.9],[2007,81.3],[2008,81.4],[2009,81.5],[2010,81.8],[2011,82.3],[2012,82.1],[2013,82.4],[2014,82.4],[2015,82.1],[2016,82.4],[2017,82.4],[2018,82.6],[2019,82.7],[2020,82.2],[2021,82.2],[2022,82.2],[2023,82.9],[2024,83.0]]},{"name":"Union européenne","alt":true,"pts":[[2002,77.6],[2003,77.7],[2004,78.3],[2005,78.4],[2006,78.9],[2007,79.1],[2008,79.3],[2009,79.5],[2010,79.8],[2011,80.1],[2012,80.2],[2013,80.5],[2014,80.6],[2015,80.5],[2016,80.7],[2017,80.7],[2018,80.8],[2019,81.1],[2020,80.3],[2021,80.0],[2022,80.6],[2023,81.2],[2024,81.5]]}],"src":"Eurostat. France entière depuis 2014. 2023 et 2024 provisoires pour la France."},
     dcsi:{"type":"line","title":"Dépense courante de santé","unit":"% du PIB (définition internationale)","dec":1,"suf":" %","series":[{"name":"France","pts":[[2006,10.4],[2007,10.33],[2008,10.51],[2009,11.29],[2010,11.02],[2011,10.97],[2012,11.11],[2013,11.25],[2014,11.34],[2015,11.28],[2016,11.35],[2017,11.25],[2018,11.11],[2019,10.98],[2020,11.92],[2021,12.08],[2022,11.7],[2023,11.33],[2024,11.33],[2025,11.48]]},{"name":"Union européenne","alt":true,"pts":[[2014,9.91],[2015,9.86],[2016,9.87],[2017,9.81],[2018,9.79],[2019,9.84],[2020,10.76],[2021,10.79],[2022,10.26],[2023,9.94],[2024,10.16]]}],"src":"Eurostat, comptes de la santé (système international SHA). France à partir de 2006, Union européenne à partir de 2014. 2025 provisoire."},
-    rac:{type:'line',title:'Reste à charge des ménages',unit:'% de la dépense courante de santé',dec:1,suf:' %',
-      series:[{name:'Reste à charge',pts:[[2014,12.0],[2019,11.5],[2020,10.6],[2021,10.3],[2022,10.4],[2023,10.2],[2024,10.2]]}],
-      src:'Drees, comptes de la santé 2025, fiche 22.'},
+    rac:{"type":"line","title":"Reste à charge des ménages","unit":"Paiements directs des ménages, % de la dépense courante de santé","dec":1,"suf":" %","series":[{"name":"France","pts":[[2010,11.96],[2011,11.95],[2012,11.88],[2013,11.77],[2014,11.76],[2015,11.73],[2016,11.57],[2017,11.62],[2018,11.49],[2019,11.55],[2020,10.68],[2021,10.30],[2022,10.38],[2023,10.21],[2024,10.17],[2025,10.32,"p"]]},{"name":"Union européenne","alt":true,"pts":[[2014,16.39],[2015,16.42],[2016,16.24],[2017,16.27],[2018,16.17],[2019,16.12],[2020,14.78],[2021,14.95],[2022,14.85],[2023,15.20],[2024,15.06]]}],"src":"Eurostat, comptes de la santé (système international SHA), paiements directs des ménages, mise à jour du 4 novembre 2026. Valeurs pour la France transmises par la Drees. 2025 provisoire pour la France ; moyenne européenne publiée à partir de 2014. Ce qui reste à payer après la Sécurité sociale, les complémentaires santé et l’État."},
     div_chom:{"type":"line","title":"Combien de chômeurs selon la source","unit":"Millions de personnes, moyenne annuelle","dec":2,"tdec":1,"series":[{"name":"Chômeurs au sens du BIT (Insee)","pts":[[2003,2.37],[2004,2.49],[2005,2.51],[2006,2.52],[2007,2.3],[2008,2.15],[2009,2.66],[2010,2.71],[2011,2.69],[2012,2.88],[2013,3.06],[2014,3.05],[2015,3.08],[2016,3.01],[2017,2.82],[2018,2.72],[2019,2.54],[2020,2.41],[2021,2.41],[2022,2.26],[2023,2.3],[2024,2.33],[2025,2.45]]},{"name":"Inscrits en catégorie A (France Travail)","alt":true,"pts":[[2003,2.87],[2004,2.87],[2005,2.85],[2006,2.58],[2007,2.29],[2008,2.22],[2009,2.71],[2010,2.9],[2011,2.98],[2012,3.22],[2013,3.51],[2014,3.66],[2015,3.81],[2016,3.77],[2017,3.74],[2018,3.7],[2019,3.61],[2020,3.93],[2021,3.61],[2022,3.14],[2023,3.02],[2024,3.05],[2025,3.31]]}],"src":"Insee, enquête Emploi, via Eurostat (15-74 ans) ; France Travail et Dares, STMT, données corrigées des variations saisonnières, moyenne des quatre trimestres."},
     div_pauv:{"type":"line","title":"Taux de pauvreté selon le seuil choisi","unit":"% de la population, France","dec":1,"suf":" %","breaks":[2020,2022],"series":[{"name":"Seuil de 60 % du revenu médian","pts":[[2004,13.5],[2005,13.0],[2006,13.2],[2007,13.1],[2008,12.5],[2009,12.9],[2010,13.3],[2011,14.0],[2012,14.1],[2013,13.7],[2014,13.3],[2015,13.6],[2016,13.6],[2017,13.2],[2018,13.4],[2019,13.6],[2020,14.2],[2021,14.3],[2022,15.6],[2023,15.4],[2024,15.9],[2025,16.3]]},{"name":"Seuil de 50 % du revenu médian","alt":true,"pts":[[2004,7.2],[2005,6.4],[2006,7.2],[2007,6.8],[2008,5.7],[2009,6.7],[2010,7.3],[2011,7.1],[2012,6.9],[2013,6.9],[2014,6.7],[2015,6.5],[2016,6.8],[2017,6.6],[2018,6.7],[2019,6.7],[2020,8.4],[2021,8.1],[2022,9.1],[2023,8.8],[2024,8.8],[2025,9.4]]}],"src":"Eurostat, enquête SRCV menée par l’Insee. Année de l’enquête : les revenus portent sur l’année précédente."},
     div_retr:{"type":"hbar","title":"Combien coûtent les retraites en 2022 ?","unit":"% du PIB, selon l’organisme","suf":" %","dec":1,"rows":[["Eurostat",14.8],["COR",13.6],["Drees",13.3]],"src":"Eurostat, comptes de la protection sociale ; COR, rapport annuel 2026 ; Drees, Les retraités et les retraites 2025. Même année pour les trois."}
   };
 
+  // Fenêtre « Agrandir » : graphique en grand et choix de la période (courbes).
+  var zbox=document.getElementById('zoombox'), zc=document.getElementById('zchart'), zf=document.getElementById('zfrom'), zt=document.getElementById('zto'), zctl=document.getElementById('zctl'), zkey=null, zyears=[];
+  function zoomRender(){
+    var c=C[zkey]; if(!c) return;
+    try{
+      if(c.type==='bars'){ bars(zc,c,{bare:true}); return; }
+      if(c.type==='hbar'){ hbar(zc,c,{bare:true}); return; }
+      var a=+zf.value, b=+zt.value; if(a>b){ var tmp=a; a=b; b=tmp; }
+      var cz={}; for(var k in c) cz[k]=c[k];
+      cz.series=c.series.map(function(s){ var o={}; for(var k in s) o[k]=s[k]; o.pts=s.pts.filter(function(p){ var y=Math.floor(p[0]+1e-6); return y>=a && y<=b; }); return o; }).filter(function(s){ return s.pts.length>0; });
+      if(c.budgets) cz.budgets=c.budgets.filter(function(x){ return x.a<=b && x.b>=a; }).map(function(x){ return {a:Math.max(x.a,a), b:Math.min(x.b,b), v:x.v, p:x.p}; });
+      if(!cz.series.some(function(s){ return s.pts.length>1; })){ zc.innerHTML='<h4>'+c.title+'</h4><p class="src">Choisissez une période d’au moins deux années.</p>'; return; }
+      cz.read=readOf(cz);
+      var wide=zc.getBoundingClientRect().width>=700; line(zc,cz,{bare:true,big:wide,tall:!wide});
+    }catch(e){ zc.innerHTML='<p class="src">Graphique indisponible.</p>'; }
+  }
+  function openZoom(key){
+    var c=C[key]; if(!c||!zbox) return; zkey=key;
+    if(c.type==='line'){
+      var seen={}; c.series.forEach(function(s){ s.pts.forEach(function(p){ seen[Math.floor(p[0]+1e-6)]=1; }); });
+      (c.budgets||[]).forEach(function(x){ for(var y=x.a;y<=x.b;y++) seen[y]=1; });
+      zyears=Object.keys(seen).map(Number).sort(function(a,b){return a-b;});
+      var o=zyears.map(function(y){ return '<option value="'+y+'">'+y+'</option>'; }).join('');
+      zf.innerHTML=o; zt.innerHTML=o; zf.value=zyears[0]; zt.value=zyears[zyears.length-1]; zctl.hidden=false;
+    } else { zctl.hidden=true; }
+    try{ zbox.showModal(); }catch(e){ zbox.setAttribute('open',''); }
+    zoomRender();
+  }
+  function closeZoom(){ try{ zbox.close(); }catch(e){ zbox.removeAttribute('open'); } }
+  if(zbox){
+    zf.addEventListener('change', zoomRender); zt.addEventListener('change', zoomRender);
+    document.getElementById('zall').addEventListener('click', function(){ zf.value=zyears[0]; zt.value=zyears[zyears.length-1]; zoomRender(); });
+    document.getElementById('zclose').addEventListener('click', closeZoom);
+    zbox.addEventListener('click', function(e){ if(e.target===zbox) closeZoom(); });
+  }
+
   document.querySelectorAll('[data-c]').forEach(function(el){
     var c=C[el.dataset.c]; if(!c) return;
     try{
-      if(c.type==='line'){ if(!c.read){ var r=c.series.filter(function(s){return !s.proj;}).map(function(s){ return (c.series.length>1?s.name+' : ':'')+readLine(s.pts,c.dec,c.suf||'',c); }).join(' · '); c.read=r.charAt(0).toUpperCase()+r.slice(1)+'.'; } line(el,c); }
+      if(c.type==='line'){ if(!c.read) c.read=readOf(c); line(el,c); }
       else if(c.type==='bars'){ c.read = 'De '+f(c.pts[0][1],1)+' % en '+c.pts[0][0]+' à '+f(c.pts[c.pts.length-1][1],1)+' % en '+c.pts[c.pts.length-1][0]+'.'; bars(el,c); }
       else if(c.type==='hbar'){ hbar(el,c); }
+      var zb=el.querySelector('button.zoom');
+      if(zb) zb.addEventListener('click', function(){ openZoom(el.dataset.c); });
       var b=el.querySelector('button.csv');
       if(b){
         b.id='csv-'+el.dataset.c;
@@ -720,8 +901,92 @@ footer{margin-top:48px;padding-block:22px 40px;border-top:2px solid var(--ink);f
       }
     }catch(e){ el.innerHTML='<p class="src">Graphique indisponible.</p>'; }
   });
+  // Onglets : #climat, #retraites… n'affichent qu'un thème ; toute autre adresse les affiche tous.
+  try{
+    var arts=[].slice.call(document.querySelectorAll('article.theme')), ids=arts.map(function(a){return a.id;});
+    var tabs=[].slice.call(document.querySelectorAll('ul.tabs a')), back=document.getElementById('backall');
+    var route=function(scroll){
+      var h=(location.hash||'').replace('#',''), one=ids.indexOf(h)>=0;
+      arts.forEach(function(a){ a.hidden = one && a.id!==h; });
+      tabs.forEach(function(t){ if(t.dataset.tab===(one?h:'tous')) t.setAttribute('aria-current','page'); else t.removeAttribute('aria-current'); });
+      if(back) back.hidden=!one;
+      if(scroll && one){ var el=document.getElementById(h); if(el) el.scrollIntoView(); }
+    };
+    route(true);
+    window.addEventListener('hashchange', function(){ route(true); });
+  }catch(e){}
+  // Barre fixée en haut : on décale les ancres de sa hauteur pour qu'un titre ne passe pas dessous.
+  try{
+    var navEl=document.querySelector('nav.toc');
+    var pad=function(){ document.documentElement.style.scrollPaddingTop=(navEl.offsetHeight+8)+'px'; };
+    pad(); window.addEventListener('resize', pad);
+  }catch(e){}
+
+  // Recherche : thèmes, indicateurs (titres des graphiques) et mots des définitions.
+  try{
+    var q=document.getElementById('q'), qr=document.getElementById('qres');
+    var norm=function(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[’'«»]/g,' '); };
+    var idx=[];
+    [].forEach.call(document.querySelectorAll('article.theme'), function(a){
+      var name=a.querySelector('h3').textContent, def=a.querySelector('.def');
+      idx.push({kind:0, label:name, sub:'Thème', id:a.id, el:null, text:norm(name)});
+      [].forEach.call(a.querySelectorAll('.chart h4'), function(h){
+        var u=h.parentNode.querySelector('.unit');
+        idx.push({kind:1, label:h.textContent, sub:name, id:a.id, el:h.parentNode, text:norm(h.textContent+' '+(u?u.textContent:'')+' '+name)});
+      });
+      if(def) idx.push({kind:2, label:name, sub:'Mot présent dans la définition du thème', id:a.id, el:def, text:norm(def.textContent)});
+    });
+    [].forEach.call(document.querySelectorAll('#divergences h3.div-h'), function(h){
+      idx.push({kind:1, label:h.textContent, sub:'Quand les chiffres divergent', id:null, el:h, text:norm(h.textContent+' divergent sources')});
+    });
+    var cur=[], sel=-1;
+    function hide(){ qr.hidden=true; sel=-1; }
+    function go(r){
+      hide(); q.blur();
+      var scrollTo=function(){ var el=r.el||document.getElementById(r.id); if(el) el.scrollIntoView({block:'start'}); };
+      if(r.id && location.hash!=='#'+r.id){ location.hash=r.id; setTimeout(scrollTo,60); }
+      else scrollTo();
+    }
+    function mark(){ [].forEach.call(qr.querySelectorAll('button'), function(b,i){ b.classList.toggle('active', i===sel); }); }
+    function render(){
+      var s=norm(q.value.trim()); sel=-1; qr.innerHTML='';
+      if(s.length<2){ hide(); cur=[]; return; }
+      var words=s.split(/\s+/), has={};
+      cur=idx.filter(function(r){ return words.every(function(w){ return r.text.indexOf(w)>=0; }); })
+        .sort(function(a,b){ return a.kind-b.kind; })
+        .filter(function(r){ if(r.kind===2 && has[r.id]) return false; if(r.id) has[r.id]=1; return true; })
+        .slice(0,8);
+      if(!cur.length){
+        var li=document.createElement('li'); li.className='none'; li.textContent='Aucun résultat. Essayez « retraites », « chômage », « dette » ou « logement ».'; qr.appendChild(li);
+      }
+      cur.forEach(function(r,i){
+        var li=document.createElement('li'), b=document.createElement('button'), st=document.createElement('strong'), sp=document.createElement('span');
+        b.type='button'; b.dataset.i=i; st.textContent=r.label; sp.textContent=r.sub; b.appendChild(st); b.appendChild(sp); li.appendChild(b); qr.appendChild(li);
+      });
+      qr.hidden=false;
+    }
+    q.addEventListener('input', render);
+    q.addEventListener('focus', function(){ if(q.value.trim().length>=2) render(); });
+    q.addEventListener('keydown', function(e){
+      if(e.key==='ArrowDown' && cur.length){ sel=Math.min(sel+1,cur.length-1); mark(); e.preventDefault(); }
+      else if(e.key==='ArrowUp' && cur.length){ sel=Math.max(sel-1,0); mark(); e.preventDefault(); }
+      else if(e.key==='Enter' && cur.length){ go(cur[sel>=0?sel:0]); e.preventDefault(); }
+      else if(e.key==='Escape'){ hide(); }
+    });
+    qr.addEventListener('click', function(e){ var b=e.target.closest('button'); if(b) go(cur[+b.dataset.i]); });
+    document.addEventListener('pointerdown', function(e){ if(!e.target.closest('.qwrap')) hide(); });
+  }catch(e){}
+
+  // Sur petit écran, l'onglet du thème affiché reste visible dans la barre qui défile.
+  try{
+    var showTab=function(){
+      var a=document.querySelector('ul.tabs a[aria-current="page"]'); if(!a) return;
+      var ul=a.closest('ul'); ul.scrollLeft=Math.max(0, a.offsetLeft-ul.offsetLeft-ul.clientWidth/2+a.offsetWidth/2);
+    };
+    showTab(); window.addEventListener('hashchange', function(){ setTimeout(showTab,0); });
+  }catch(e){}
+
 })();
 </script>
 
-<script data-goatcounter="https://mathilde-tada.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body></html>
